@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Agosfield
+  m_EditorClassIdentifier: 
+  locationTitle: Agosfield
+  spiceMultiplier: 6
+  saltMultiplier: 3
+  artMultiplier: 3
+  sellWares:
+    activityDescription: Hey there! We'll buy salt for 3 gold, art for 3 gold, and
+      spices for 6.
+    activityResult: Nice doing business with you.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: Agosfield sells fine art for 5 gold each.
+    activityResult: You are now a proud owner of some of the finest art in the land.
+    coinChange: -5
+    spiceChange: 0
+    saltChange: 0
+    artChange: 1
+  leave:
+    activityDescription: Safe travels.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: d9f82a0f12d6942559a15b5ef1997eee, type: 2}
+  - {fileID: 11400000, guid: be8a6aa1900244f95be8b58fa6240854, type: 2}
+  - {fileID: 11400000, guid: 00067aa3b4e424dfba2225dd36cbd472, type: 2}
+  - {fileID: 11400000, guid: 2c773d22b0f7d422eaa726c59bfd8ea9, type: 2}

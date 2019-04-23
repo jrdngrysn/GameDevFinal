@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Noxbert
+  m_EditorClassIdentifier: 
+  locationTitle: Noxbert
+  spiceMultiplier: 5
+  saltMultiplier: 4
+  artMultiplier: 4
+  sellWares:
+    activityDescription: We already get most of our supplies from Prifield and Ardas
+      but we're happy to take more. We buy spice for 5, salt for 4, and art for 4.
+    activityResult: Thanks!
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We don't sell any thing in Noxbert. But if you're looking
+      for salts up North, Qard is your best bet.
+    activityResult: We don't sell anything here.
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: Safe travels, friend.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 8c6c71e021bf64d3cb6db2ea751de723, type: 2}
+  - {fileID: 11400000, guid: b0cbc7d199d2742cba95175f8bc9bd0d, type: 2}
+  - {fileID: 11400000, guid: 00067aa3b4e424dfba2225dd36cbd472, type: 2}
+  - {fileID: 11400000, guid: 818663088bb1f4654af01aebde77c9f3, type: 2}

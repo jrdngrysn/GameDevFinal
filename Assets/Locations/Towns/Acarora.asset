@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Acarora
+  m_EditorClassIdentifier: 
+  locationTitle: Acarora
+  spiceMultiplier: 7
+  saltMultiplier: 4
+  artMultiplier: 3
+  sellWares:
+    activityDescription: We buy spices for 7 gold each, salt for 4 and art for 3.
+    activityResult: Thank you for your business.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We sell art in Acarora for 5 gold each.
+    activityResult: Thank you for your purchase, we hope you find our art a good home.
+    coinChange: -5
+    spiceChange: 0
+    saltChange: 0
+    artChange: 1
+  leave:
+    activityDescription: If you have extra spices, we heard the nobles in Kheuridge
+      will pay well for them.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 9dd2ec9524484484b8441ff12aa6a2c6, type: 2}
+  - {fileID: 11400000, guid: 55c8fd9e0181c4f3a80664586da41f60, type: 2}
+  - {fileID: 11400000, guid: 7f9ff8a71ca9442b1be78d89bd6a9e21, type: 2}

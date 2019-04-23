@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Writa
+  m_EditorClassIdentifier: 
+  locationTitle: Writa
+  spiceMultiplier: 3
+  saltMultiplier: 3
+  artMultiplier: 4
+  sellWares:
+    activityDescription: We don't get many merchants in Writa, but we love them!!
+      we pay 3 gold for a bag of spices or salt and 4 for art.
+    activityResult: Great doing business with you! We really appreciate it.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We farm spices here in Writa. Our farms are big, and we only
+      sell in bulk. It's 12 gold for 3 bags of spices.
+    activityResult: Take these spices up north and they'll make you some real money.
+    coinChange: -12
+    spiceChange: 3
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: We hope to see you back soon! Safe travels!!
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 68893ad8fbc024242a26b7827a302e5d, type: 2}
+  - {fileID: 11400000, guid: 8c6c71e021bf64d3cb6db2ea751de723, type: 2}
+  - {fileID: 11400000, guid: 7e4a4ed5c46264854ba6aa941506ba50, type: 2}
+  - {fileID: 11400000, guid: b9b5876485fd6437a9428185b0f09a42, type: 2}

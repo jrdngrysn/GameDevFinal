@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Orei
+  m_EditorClassIdentifier: 
+  locationTitle: Orei
+  spiceMultiplier: 5
+  saltMultiplier: 3
+  artMultiplier: 4
+  sellWares:
+    activityDescription: We buy spice for 5 gold, salt for 3, and art for 4.
+    activityResult: Thank you for the goods.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We don't sell anything in here, but if you're trading goods,
+      we heard there's a salt shortage in Fluoson you might be able to capitalzie
+      on.
+    activityResult: We don't sell goods here.
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: If you're headed to Fluoson you have to go through Zul.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 68893ad8fbc024242a26b7827a302e5d, type: 2}
+  - {fileID: 11400000, guid: 5749fd050fd7e4b61a0a4a2e0e2852c5, type: 2}
+  - {fileID: 11400000, guid: 7f9ff8a71ca9442b1be78d89bd6a9e21, type: 2}

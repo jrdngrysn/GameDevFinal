@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Kifi
+  m_EditorClassIdentifier: 
+  locationTitle: Kifi
+  spiceMultiplier: 7
+  saltMultiplier: 4
+  artMultiplier: 5
+  sellWares:
+    activityDescription: Bless your soul. In Kifi we buy spice for 7 gold, salt for
+      4, and art for 5.
+    activityResult: Thank you! Akasea will appreciate these goods when we sell them
+      over there!
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We do not sell anything in Kifi.
+    activityResult: Blessed be you, but we do not sell anything here. We just buy
+      and re-sell in Akasea
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: Blessed be your path, merchant.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: be8a6aa1900244f95be8b58fa6240854, type: 2}
+  - {fileID: 11400000, guid: 6a3874161b5284511bfa32502c1a54ed, type: 2}
+  - {fileID: 11400000, guid: b6587b28f9f3a4e91bc3184990812b40, type: 2}
+  - {fileID: 11400000, guid: 694bfa62e1cde49bbb9d307706ba5cec, type: 2}

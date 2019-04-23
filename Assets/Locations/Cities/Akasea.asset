@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Akasea
+  m_EditorClassIdentifier: 
+  locationTitle: The Walled City of Akasea
+  spiceMultiplier: 9
+  saltMultiplier: 5
+  artMultiplier: 6
+  sellWares:
+    activityDescription: We don't get many people in or out here. We'll buy spices
+      for 9 gold each. Salt for 5, and art for 6.
+    activityResult: Thank you for doing business in Akasea. Gods be with you.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: In Akasea we craft fine art for 6 gold each.
+    activityResult: Gods be with you.
+    coinChange: -6
+    spiceChange: 0
+    saltChange: 0
+    artChange: 1
+  leave:
+    activityDescription: We hope you return to Akasea soon. Blessed be your path.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 6a3874161b5284511bfa32502c1a54ed, type: 2}
+  - {fileID: 11400000, guid: 0f60e3ebf8be04eaa85b9385ed6bd7f2, type: 2}
+  - {fileID: 11400000, guid: 694bfa62e1cde49bbb9d307706ba5cec, type: 2}
+  - {fileID: 11400000, guid: b0cbc7d199d2742cba95175f8bc9bd0d, type: 2}

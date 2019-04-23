@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Yirlas
+  m_EditorClassIdentifier: 
+  locationTitle: Yirlas
+  spiceMultiplier: 6
+  saltMultiplier: 3
+  artMultiplier: 2
+  sellWares:
+    activityDescription: We'll buy spices for 6 gold if you have em. We'll also take
+      salt for 3 and art for 2.
+    activityResult: Glad we could make a deal
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: In Yirlas we make the greatest art in the land! We only sell
+      in doubles and it'll cost you 6 gold for 2.
+    activityResult: Thank you!
+    coinChange: -6
+    spiceChange: 0
+    saltChange: 0
+    artChange: 2
+  leave:
+    activityDescription: Hope to see you soon.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 818663088bb1f4654af01aebde77c9f3, type: 2}
+  - {fileID: 11400000, guid: 00067aa3b4e424dfba2225dd36cbd472, type: 2}

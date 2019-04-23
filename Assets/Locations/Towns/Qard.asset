@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Qard
+  m_EditorClassIdentifier: 
+  locationTitle: Qard
+  spiceMultiplier: 9
+  saltMultiplier: 1
+  artMultiplier: 3
+  sellWares:
+    activityDescription: Gods bless you. We buy spices and sell the best priced salt
+      in the land. We'll buy spices for 9, salt for 1, and art for 3.
+    activityResult: May the Gods watch over you.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We sell the best priced salt in the land. Those fools in
+      New Tarbury are no match for us. Our salt is 1 gold a bag
+    activityResult: Thank you for buying our salts. Gods guide you.
+    coinChange: -1
+    spiceChange: 0
+    saltChange: 1
+    artChange: 0
+  leave:
+    activityDescription: May the Gods keep you safe.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 0f60e3ebf8be04eaa85b9385ed6bd7f2, type: 2}
+  - {fileID: 11400000, guid: b6587b28f9f3a4e91bc3184990812b40, type: 2}
+  - {fileID: 11400000, guid: b0cbc7d199d2742cba95175f8bc9bd0d, type: 2}

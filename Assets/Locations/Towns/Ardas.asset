@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Ardas
+  m_EditorClassIdentifier: 
+  locationTitle: Ardas
+  spiceMultiplier: 6
+  saltMultiplier: 7
+  artMultiplier: 4
+  sellWares:
+    activityDescription: If you sell us 2 bags of salt we'll pay you 7 gold. We also
+      pay 6 for spices and 4 for art.
+    activityResult: Great!
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -2
+    artChange: -1
+  buyWares:
+    activityDescription: In Ardas we sell some great art for 4 gold each.
+    activityResult: I hear the people of New Tarbury love art. Maybe take this there.
+    coinChange: -4
+    spiceChange: 0
+    saltChange: 0
+    artChange: 1
+  leave:
+    activityDescription: I hear cities up north are looking for spices.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 2c773d22b0f7d422eaa726c59bfd8ea9, type: 2}
+  - {fileID: 11400000, guid: 818663088bb1f4654af01aebde77c9f3, type: 2}
+  - {fileID: 11400000, guid: be8a6aa1900244f95be8b58fa6240854, type: 2}

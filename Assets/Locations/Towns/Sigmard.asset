@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Sigmard
+  m_EditorClassIdentifier: 
+  locationTitle: Sigmard
+  spiceMultiplier: 8
+  saltMultiplier: 3
+  artMultiplier: 3
+  sellWares:
+    activityDescription: We buy spices for 8 gold, and salt and art for 3 each. We
+      get our salt from Qard, they have the best price in the land.
+    activityResult: Thank you.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We don't sell anything in Sigmard, but if you're looking
+      to buy, check out Qard for some amazing salts.
+    activityResult: We don't sell goods here.
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: 
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 8deff494d4e214cde9205664342f06c4, type: 2}
+  - {fileID: 11400000, guid: 694bfa62e1cde49bbb9d307706ba5cec, type: 2}
+  - {fileID: 11400000, guid: b6587b28f9f3a4e91bc3184990812b40, type: 2}

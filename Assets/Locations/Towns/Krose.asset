@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Krose
+  m_EditorClassIdentifier: 
+  locationTitle: Krose
+  spiceMultiplier: 5
+  saltMultiplier: 2
+  artMultiplier: 3
+  sellWares:
+    activityDescription: Hi there, we don't have much need for salt becuase we have
+      a new road straight to New Tarbury, but we'll buy it for 2 gold a bag. We will
+      also buy spice for 5 and art for 3.
+    activityResult: 'Thank you. A fine merchant such as yourself deserves some extra
+      information: Out of the Western villages, Yirlas has the best deals on art.'
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: Hi there, in Krose we don't sell anything. But if you're
+      looking for art, head just a bit further west.
+    activityResult: Sorry, we don't sell anything.
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: Hope to see you pass through again soon.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: b9b5876485fd6437a9428185b0f09a42, type: 2}
+  - {fileID: 11400000, guid: 7e4a4ed5c46264854ba6aa941506ba50, type: 2}
+  - {fileID: 11400000, guid: 818663088bb1f4654af01aebde77c9f3, type: 2}

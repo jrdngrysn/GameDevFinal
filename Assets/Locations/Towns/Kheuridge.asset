@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Kheuridge
+  m_EditorClassIdentifier: 
+  locationTitle: Kheuridge
+  spiceMultiplier: 12
+  saltMultiplier: 4
+  artMultiplier: 6
+  sellWares:
+    activityDescription: We have many vacation homes for nobles here. We will pay
+      12 gold for spices, 4 for salt and 6 for art.
+    activityResult: Thank you very much for the goods. We hope you return with more.
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We do not sell anything in Kheuridge.
+    activityResult: Sorry, we do not sell goods here.
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: Thank you for visiting Kheuridge.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 5749fd050fd7e4b61a0a4a2e0e2852c5, type: 2}

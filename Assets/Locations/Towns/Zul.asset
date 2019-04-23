@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4eb6fa4f9f4fbabd9ac9a47bacdd3, type: 3}
+  m_Name: Zul
+  m_EditorClassIdentifier: 
+  locationTitle: Zul
+  spiceMultiplier: 9
+  saltMultiplier: 4
+  artMultiplier: 3
+  sellWares:
+    activityDescription: We loves spices in Zul, although maybe not as much as Kheuridge.
+      We will buy spices for 9, salt for 4, and art for 3.
+    activityResult: Thanks!
+    coinChange: 1
+    spiceChange: -1
+    saltChange: -1
+    artChange: -1
+  buyWares:
+    activityDescription: We don't sell anything in Zul, but we have information that
+      Kheuridge is home to the summer homes of rich nobles and will pay vast amounts
+      for spcies.
+    activityResult: We don't sell anything here in Zul.
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  leave:
+    activityDescription: If you're heading to Kheuridge you have to go through Acarora.
+    activityResult: 
+    coinChange: 0
+    spiceChange: 0
+    saltChange: 0
+    artChange: 0
+  locations:
+  - {fileID: 11400000, guid: 9dd2ec9524484484b8441ff12aa6a2c6, type: 2}
+  - {fileID: 11400000, guid: 5749fd050fd7e4b61a0a4a2e0e2852c5, type: 2}
+  - {fileID: 11400000, guid: 8deff494d4e214cde9205664342f06c4, type: 2}
