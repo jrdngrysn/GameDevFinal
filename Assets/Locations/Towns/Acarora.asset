@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Acarora
   m_EditorClassIdentifier: 
   locationTitle: Acarora
+  locationInstance: {fileID: 990578396639686398, guid: 44fc10642a5804434a30cf3cbf245c36,
+    type: 3}
   spiceMultiplier: 7
   saltMultiplier: 4
   artMultiplier: 3

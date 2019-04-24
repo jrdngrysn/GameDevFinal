@@ -15,23 +15,25 @@ public class Randomizer : MonoBehaviour
     {
         for (int i = 0; i < locationSlots.Length; i++)
         {
-           int rand = Random.Range(0, allLocations.Length);
-
-            if (!locationDictionary.ContainsKey(allLocations[rand].locationTitle))
-            {
-                locationDictionary.Add(allLocations[rand].locationTitle, allLocations[rand]);
-                locationSlots[i].GetComponent<Slot>().linkedLocation = allLocations[rand];
-            }
-            else
-            {
-
-            }
-
-
+            SetLocation(i);
 
         }
     }
 
+    void SetLocation (int i)
+    {
+        int rand = Random.Range(0, allLocations.Length);
+
+        if (!locationDictionary.ContainsKey(allLocations[rand].locationTitle))
+        {
+            locationDictionary.Add(allLocations[rand].locationTitle, allLocations[rand]);
+            locationSlots[i].GetComponent<Slot>().linkedLocation = allLocations[rand];
+        }
+        else
+        {
+            SetLocation(i);
+        }
+    }
 
     // Update is called once per frame
     void Update()
