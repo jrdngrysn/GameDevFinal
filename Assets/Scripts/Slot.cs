@@ -18,4 +18,9 @@ public class Slot : MonoBehaviour
     {
         
     }
+
+    private void OnMouseDown()
+    {
+        GameManager.Instance.currentLocation = linkedLocation;
+    }
 }

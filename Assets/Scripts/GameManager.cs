@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         peopleSource.clip = peopleSound;
 
-        currentLocation = Randomizer.Instance.locationSlots[0].GetComponent<Slot>().linkedLocation;
+        currentLocation = Randomizer.Instance.locationSlots[Random.Range(0, Randomizer.Instance.locationSlots.Length)].GetComponent<Slot>().linkedLocation;
     }
 
     // Update is called once per frame
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
 
     void ManageStatText ()
     {
-        statTextField.text = "Coins: " + coins.ToString() + "\t\tSpice: " + spices.ToString() + "\t\tSalt: " + salts.ToString() + "\t\tArt: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
+        statTextField.text ="Coins: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
     }
 
     void ManageLocationText()
