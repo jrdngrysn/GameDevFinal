@@ -5,19 +5,15 @@ using UnityEngine;
 public class Slot : MonoBehaviour
 {
     public Location linkedLocation;
-
+    public int slotNumber;
 
     // Start is called before the first frame update
     void Start()
     {
         Instantiate(linkedLocation.locationInstance, transform);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+  
 
     private void OnMouseDown()
     {
