@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Kifi
   m_EditorClassIdentifier: 
   locationTitle: Kifi
+  locationInstance: {fileID: 6851368706334238921, guid: 1cb711c06be7647aa96deb5eeb9f7217,
+    type: 3}
   spiceMultiplier: 7
   saltMultiplier: 4
   artMultiplier: 5

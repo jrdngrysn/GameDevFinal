@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Nodale
   m_EditorClassIdentifier: 
   locationTitle: Nodale
+  locationInstance: {fileID: 5693023087069749193, guid: 0fdd0e8178db54c65b9bce263380f1d7,
+    type: 3}
   spiceMultiplier: 4
   saltMultiplier: 2
   artMultiplier: 4

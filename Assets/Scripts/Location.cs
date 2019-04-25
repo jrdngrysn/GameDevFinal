@@ -10,6 +10,8 @@ public class Location : ScriptableObject
 
     public string locationTitle;
 
+    public GameObject locationInstance;
+
     [Header("Good Values")]
     public int spiceMultiplier;
     public int saltMultiplier;

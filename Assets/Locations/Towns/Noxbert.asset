@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Noxbert
   m_EditorClassIdentifier: 
   locationTitle: Noxbert
+  locationInstance: {fileID: 5595556345722268441, guid: da5b6aeea8352490b944f6bccb8ae39b,
+    type: 3}
   spiceMultiplier: 5
   saltMultiplier: 4
   artMultiplier: 4

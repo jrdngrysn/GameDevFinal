@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: New Tarbury
   m_EditorClassIdentifier: 
   locationTitle: New Tarbury
+  locationInstance: {fileID: 8170704898731478374, guid: f83d5995923fa4a1c8360371b7da45fe,
+    type: 3}
   spiceMultiplier: 4
   saltMultiplier: 1
   artMultiplier: 7

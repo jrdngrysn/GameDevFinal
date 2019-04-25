@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Akasea
   m_EditorClassIdentifier: 
   locationTitle: The Walled City of Akasea
+  locationInstance: {fileID: 3034727962120228646, guid: a33cc20d250de4e0b8e97c0c3c9d9a06,
+    type: 3}
   spiceMultiplier: 9
   saltMultiplier: 5
   artMultiplier: 6
