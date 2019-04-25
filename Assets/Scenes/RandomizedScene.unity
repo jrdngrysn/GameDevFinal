@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244036288}
   - component: {fileID: 244036287}
-  - component: {fileID: 244036290}
+  - component: {fileID: 244036289}
   m_Layer: 0
   m_Name: Slot4
   m_TagString: Untagged
@@ -359,8 +359,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &244036290
-BoxCollider2D:
+--- !u!58 &244036289
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -372,19 +372,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &287428782
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310687211}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.37, y: -4.1, z: 1}
+  m_LocalPosition: {x: -5.67, y: -4.1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 524826591}
@@ -553,7 +543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 319022193}
   - component: {fileID: 319022192}
-  - component: {fileID: 319022195}
+  - component: {fileID: 319022194}
   m_Layer: 0
   m_Name: Slot2
   m_TagString: Untagged
@@ -588,8 +578,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &319022195
-BoxCollider2D:
+--- !u!58 &319022194
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -601,19 +591,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &330829998
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330830000}
   - component: {fileID: 330829999}
-  - component: {fileID: 330830002}
+  - component: {fileID: 330830001}
   m_Layer: 0
   m_Name: Slot3
   m_TagString: Untagged
@@ -659,8 +639,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &330830002
-BoxCollider2D:
+--- !u!58 &330830001
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -672,19 +652,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &362639424
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396511052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.2, y: -4.11, z: 1}
+  m_LocalPosition: {x: -7.97, y: -4.11, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 524826591}
@@ -954,7 +924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531982215}
   - component: {fileID: 531982214}
-  - component: {fileID: 531982217}
+  - component: {fileID: 531982216}
   m_Layer: 0
   m_Name: Slot5
   m_TagString: Untagged
@@ -989,8 +959,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &531982217
-BoxCollider2D:
+--- !u!58 &531982216
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1002,19 +972,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &602994697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602994699}
   - component: {fileID: 602994698}
-  - component: {fileID: 602994701}
+  - component: {fileID: 602994700}
   m_Layer: 0
   m_Name: Slot6
   m_TagString: Untagged
@@ -1060,8 +1020,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &602994701
-BoxCollider2D:
+--- !u!58 &602994700
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1073,19 +1033,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &607121530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615840394}
   - component: {fileID: 615840393}
-  - component: {fileID: 615840396}
+  - component: {fileID: 615840395}
   m_Layer: 0
   m_Name: Slot7
   m_TagString: Untagged
@@ -1210,8 +1160,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &615840396
-BoxCollider2D:
+--- !u!58 &615840395
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1223,19 +1173,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &740134454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240816630}
   - component: {fileID: 1240816629}
-  - component: {fileID: 1240816632}
+  - component: {fileID: 1240816631}
   m_Layer: 0
   m_Name: Slot1
   m_TagString: Untagged
@@ -1788,8 +1728,8 @@ Transform:
   m_Father: {fileID: 111019147}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1240816632
-BoxCollider2D:
+--- !u!58 &1240816631
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1801,19 +1741,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.55
 --- !u!1 &1269507252
 GameObject:
   m_ObjectHideFlags: 0
