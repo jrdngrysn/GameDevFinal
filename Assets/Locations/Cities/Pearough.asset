@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Pearough
   m_EditorClassIdentifier: 
   locationTitle: Pearough
+  locationInstance: {fileID: 7631155461311675410, guid: d1dbad030f2374164b3207a200bdf3bf,
+    type: 3}
   spiceMultiplier: 3
   saltMultiplier: 11
   artMultiplier: 3

@@ -10,9 +10,13 @@ public class Randomizer : MonoBehaviour
 
     public Dictionary<string, Location> locationDictionary = new Dictionary<string, Location>();
 
+    public static Randomizer Instance;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Instance = this;
+
         for (int i = 0; i < locationSlots.Length; i++)
         {
             SetLocation(i);

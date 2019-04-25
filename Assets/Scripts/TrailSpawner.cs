@@ -31,7 +31,7 @@ public class TrailSpawner : MonoBehaviour
     {
         dotTimer += Time.deltaTime;
 
-        currentLocationCoords = GameObject.Find(GameManager.Instance.currentLocation.locationTitle);
+        currentLocationCoords = GameObject.Find(GameManager.Instance.currentLocation.locationTitle + "(Clone)");
 
         if (gameObject.transform.position.x != currentLocationCoords.transform.position.x && gameObject.transform.position.y != currentLocationCoords.transform.position.y)
         {

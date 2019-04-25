@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
         //setting the instance
         Instance = this;
         peopleSource.clip = peopleSound;
+
+        currentLocation = Randomizer.Instance.locationSlots[0].GetComponent<Slot>().linkedLocation;
     }
 
     // Update is called once per frame

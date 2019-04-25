@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Fluoson
   m_EditorClassIdentifier: 
   locationTitle: Fluoson
+  locationInstance: {fileID: 5724249648714523261, guid: 0d61796f499db4b338223752339bd780,
+    type: 3}
   spiceMultiplier: 3
   saltMultiplier: 6
   artMultiplier: 3
