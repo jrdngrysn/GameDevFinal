@@ -9,6 +9,7 @@ public class Location : ScriptableObject
     //scriptable object containing question text to be displayed and an array of answers
 
     public string locationTitle;
+    public int locationSlot;
 
     public GameObject locationInstance;
 

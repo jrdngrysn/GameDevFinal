@@ -345,7 +345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 4
+  distanceCounter: 0
 --- !u!4 &244036288
 Transform:
   m_ObjectHideFlags: 0
@@ -565,7 +566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 2
+  distanceCounter: 0
 --- !u!4 &319022193
 Transform:
   m_ObjectHideFlags: 0
@@ -627,7 +629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 3
+  distanceCounter: 0
 --- !u!4 &330830000
 Transform:
   m_ObjectHideFlags: 0
@@ -944,7 +947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 5
+  distanceCounter: 0
 --- !u!4 &531982215
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,7 +1010,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 6
+  distanceCounter: 0
 --- !u!4 &602994699
 Transform:
   m_ObjectHideFlags: 0
@@ -1147,7 +1152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 7
+  distanceCounter: 0
 --- !u!4 &615840394
 Transform:
   m_ObjectHideFlags: 0
@@ -1901,7 +1907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkedLocation: {fileID: 0}
-  slotNumber: 0
+  slotNumber: 1
+  distanceCounter: 0
 --- !u!4 &1240816630
 Transform:
   m_ObjectHideFlags: 0
