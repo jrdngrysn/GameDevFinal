@@ -67,7 +67,7 @@ public class TrailSpawner : MonoBehaviour
 
     void SpawnDots()
     {
-        Vector3 spawnPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        Vector3 spawnPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 3);
         Instantiate(dotToSpawn, spawnPos, Quaternion.identity);
     }
 
