@@ -24,11 +24,7 @@ public class UIButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        //float cameraHeight = Camera.main.orthographicSize;
-
-        //movableUI.transform.localScale = new Vector3(cameraHeight / 8.5f, movableUI.transform.localScale.y, movableUI.transform.localScale.z);
+  
         if (isLerping)
         {
             if (textPosition == "upper")
