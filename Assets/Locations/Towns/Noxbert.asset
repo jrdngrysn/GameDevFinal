@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Noxbert
   m_EditorClassIdentifier: 
   locationTitle: Noxbert
+  locationSlot: 4
   locationInstance: {fileID: 5595556345722268441, guid: da5b6aeea8352490b944f6bccb8ae39b,
     type: 3}
-  spiceMultiplier: 5
-  saltMultiplier: 4
-  artMultiplier: 4
+  nutMultiplier: 1
+  batteryMultiplier: 1
+  circuitMultiplier: 1
+  nutMultiplierBuy: 2
+  batteryMultiplierBuy: 2
+  circuitMultiplierBuy: 2
   sellWares:
     activityDescription: We already get most of our supplies from Prifield and Ardas
       but we're happy to take more. We buy spice for 5, salt for 4, and art for 4.

@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Nodale
   m_EditorClassIdentifier: 
   locationTitle: Nodale
+  locationSlot: 7
   locationInstance: {fileID: 5693023087069749193, guid: 0fdd0e8178db54c65b9bce263380f1d7,
     type: 3}
-  spiceMultiplier: 4
-  saltMultiplier: 2
-  artMultiplier: 4
+  nutMultiplier: 1
+  batteryMultiplier: 1
+  circuitMultiplier: 1
+  nutMultiplierBuy: 3
+  batteryMultiplierBuy: 3
+  circuitMultiplierBuy: 3
   sellWares:
     activityDescription: Hello! You are probably on your way somewhere else, but if
       you can spare it, we will gladly pay 5 gold for spices, 2 for salt, and 4 for

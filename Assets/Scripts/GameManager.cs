@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
      public int salts = 0;
      public int arts = 0;
      public int daysLeft = 15;
+     public TextMesh playerMoney;
+     public TextMesh merchantMoney;
 
     
     //bool tracks if the player has reached the end
@@ -66,6 +68,16 @@ public class GameManager : MonoBehaviour
     bool playingPeopleSound = false;
 
 
+    [Header("Animation Stuff")]
+
+    public Animator playerTableAnimator;
+    public Animator merchantTableAnimator;
+
+    public Animator exitButtonAnimator;
+
+    public GameObject hamburgerButton;
+    Animator hamburgerAnimator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +87,8 @@ public class GameManager : MonoBehaviour
         peopleSource.clip = peopleSound;
 
         currentLocation = Randomizer.Instance.locationSlots[Random.Range(0, Randomizer.Instance.locationSlots.Length)].GetComponent<Slot>().linkedLocation;
+
+        hamburgerAnimator = hamburgerButton.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -127,6 +141,11 @@ public class GameManager : MonoBehaviour
             if (TrailSpawner.Instance.moving == true)
             {
                 phaseOfLocation = "moving";
+                playerTableAnimator.SetBool("Shown", false);
+                merchantTableAnimator.SetBool("Shown", false);
+                exitButtonAnimator.SetBool("Shown", false);
+                hamburgerAnimator.SetBool("Active", true);
+                Camera.main.GetComponent<CameraScript>().atCity = false;
                 peopleSource.Stop();
                 locationTextField.text = movementText;
 
@@ -135,6 +154,13 @@ public class GameManager : MonoBehaviour
             {
                 phaseOfLocation = "welcome";
                 locationTextField.text = welcomeText;
+                playerTableAnimator.SetBool("Shown", true);
+                merchantTableAnimator.SetBool("Shown", true);
+                exitButtonAnimator.SetBool("Shown", true);
+                hamburgerAnimator.SetBool("Active", false);
+                playerMoney.text = "$" + coins.ToString();
+                merchantMoney.text = "$" + coins.ToString();
+                Camera.main.GetComponent<CameraScript>().atCity = true;
                 if (playingPeopleSound == false)
                 {
                     peopleSource.Play();
@@ -147,6 +173,12 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     playingPeopleSound = false;
                 }
+            } else if (phaseOfLocation == "leaving")
+            {
+                playerTableAnimator.SetBool("Shown", false);
+                merchantTableAnimator.SetBool("Shown", false);
+                hamburgerAnimator.SetBool("Active", true);
+                peopleSource.Stop();
             }
             else if (phaseOfLocation == "activity")
             {
@@ -177,7 +209,7 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     if (spices >= Mathf.Abs(currentLocation.sellWares.spiceChange))
                     {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.spiceMultiplier;
+                        coins += currentLocation.sellWares.coinChange * currentLocation.nutMultiplier;
                         spices += currentLocation.sellWares.spiceChange;
                         audioSource.PlayOneShot(moneySound);
                         phaseOfLocation = "sold";
@@ -193,7 +225,7 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     if (salts >= Mathf.Abs(currentLocation.sellWares.saltChange))
                     {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.saltMultiplier;
+                        coins += currentLocation.sellWares.coinChange * currentLocation.batteryMultiplier;
                         salts += currentLocation.sellWares.saltChange;
                         audioSource.PlayOneShot(moneySound);
                         phaseOfLocation = "sold";
@@ -208,7 +240,7 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     if (arts >= Mathf.Abs(currentLocation.sellWares.artChange))
                     {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.artMultiplier;
+                        coins += currentLocation.sellWares.coinChange * currentLocation.circuitMultiplier;
                         arts += currentLocation.sellWares.artChange;
                         audioSource.PlayOneShot(moneySound);
                         phaseOfLocation = "sold";

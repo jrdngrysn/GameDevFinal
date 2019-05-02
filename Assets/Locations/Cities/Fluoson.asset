@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Fluoson
   m_EditorClassIdentifier: 
   locationTitle: Fluoson
+  locationSlot: 4
   locationInstance: {fileID: 5724249648714523261, guid: 0d61796f499db4b338223752339bd780,
     type: 3}
-  spiceMultiplier: 3
-  saltMultiplier: 6
-  artMultiplier: 3
+  nutMultiplier: 2
+  batteryMultiplier: 2
+  circuitMultiplier: 2
+  nutMultiplierBuy: 3
+  batteryMultiplierBuy: 3
+  circuitMultiplierBuy: 3
   sellWares:
     activityDescription: Here in Fluoson we are experiencing quite a shortage. We
       will buy salt for 6 gold a bag. If you also have spices or art we'll only buy

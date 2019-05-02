@@ -13,10 +13,15 @@ public class Location : ScriptableObject
 
     public GameObject locationInstance;
 
-    [Header("Good Values")]
-    public int spiceMultiplier;
-    public int saltMultiplier;
-    public int artMultiplier;
+    [Header("Sell Values")]
+    public int nutMultiplier;
+    public int batteryMultiplier;
+    public int circuitMultiplier;
+
+    [Header("Buy Values")]
+    public int nutMultiplierBuy;
+    public int batteryMultiplierBuy;
+    public int circuitMultiplierBuy;
 
     [Header("Things to do")]
     public Activity sellWares;
