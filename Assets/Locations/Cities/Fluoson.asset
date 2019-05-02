@@ -22,6 +22,7 @@ MonoBehaviour:
   nutMultiplierBuy: 3
   batteryMultiplierBuy: 3
   circuitMultiplierBuy: 3
+  merchantMoney: 42
   sellWares:
     activityDescription: Here in Fluoson we are experiencing quite a shortage. We
       will buy salt for 6 gold a bag. If you also have spices or art we'll only buy

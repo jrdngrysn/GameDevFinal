@@ -23,6 +23,9 @@ public class Location : ScriptableObject
     public int batteryMultiplierBuy;
     public int circuitMultiplierBuy;
 
+    [Header("Money")]
+    public int merchantMoney;
+
     [Header("Things to do")]
     public Activity sellWares;
     public Activity buyWares;
