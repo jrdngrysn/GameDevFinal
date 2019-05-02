@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     void ManageStatText ()
     {
-        statTextField.text ="Coins: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
+        statTextField.text ="Coins: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
     }
 
     void ManageLocationText()
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
                 exitButtonAnimator.SetBool("Shown", true);
                 hamburgerAnimator.SetBool("Active", false);
                 playerMoney.text = "$" + coins.ToString();
-                merchantMoney.text = "$" + coins.ToString();
+                merchantMoney.text = "$" + currentLocation.merchantMoney.ToString();
                 Camera.main.GetComponent<CameraScript>().atCity = true;
                 if (playingPeopleSound == false)
                 {

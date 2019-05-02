@@ -10,7 +10,8 @@ public class UIButtonScript : MonoBehaviour
      public string buttonType;
      public string good;
      public Location emptyLocation;
-     public Text changeableText;
+     public Text changeableTextPrice;
+     public Text changeableTextCount;
 
     private void Start()
     {
@@ -29,30 +30,34 @@ public class UIButtonScript : MonoBehaviour
             {
                 if (good == "nut")
                 {
-                    changeableText.text = "$ " + GameManager.Instance.currentLocation.nutMultiplier.ToString();
+                    changeableTextPrice.text = "$ " + GameManager.Instance.currentLocation.nutMultiplier.ToString();
+                    changeableTextCount.text = GameManager.Instance.spices.ToString() + " count.";
                 }
                 else if (good == "battery")
                 {
-                    changeableText.text = "$ " + GameManager.Instance.currentLocation.batteryMultiplier.ToString();
+                    changeableTextPrice.text = "$ " + GameManager.Instance.currentLocation.batteryMultiplier.ToString();
+                    changeableTextCount.text = GameManager.Instance.salts.ToString() + " count.";
                 }
                 else if (good == "circuit")
                 {
-                    changeableText.text = "$ " + GameManager.Instance.currentLocation.circuitMultiplier.ToString();
+                    changeableTextPrice.text = "$ " + GameManager.Instance.currentLocation.circuitMultiplier.ToString();
+                    changeableTextCount.text = GameManager.Instance.arts.ToString() + " count.";
                 }
             }
             else if (buttonType == "buy")
             {
                 if (good == "nut")
                 {
-                    changeableText.text = "$ " + GameManager.Instance.currentLocation.nutMultiplierBuy.ToString();
+                    changeableTextPrice.text = "$ " + GameManager.Instance.currentLocation.nutMultiplierBuy.ToString();
+
                 }
                 else if (good == "battery")
                 {
-                    changeableText.text = "$ " + GameManager.Instance.currentLocation.batteryMultiplierBuy.ToString();
+                    changeableTextPrice.text = "$ " + GameManager.Instance.currentLocation.batteryMultiplierBuy.ToString();
                 }
                 else if (good == "circuit")
                 {
-                    changeableText.text = "$ " + GameManager.Instance.currentLocation.circuitMultiplierBuy.ToString();
+                    changeableTextPrice.text = "$ " + GameManager.Instance.currentLocation.circuitMultiplierBuy.ToString();
                 }
             }
             }
@@ -86,17 +91,20 @@ public class UIButtonScript : MonoBehaviour
     public void BuyNuts () {
         GameManager.Instance.spices++;
         GameManager.Instance.coins -= GameManager.Instance.currentLocation.nutMultiplierBuy;
+        GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
     }
 
     public void BuyBatteries()
     {
         GameManager.Instance.salts++;
-        GameManager.Instance.coins -= GameManager.Instance.currentLocation.batteryMultiplier;
+        GameManager.Instance.coins -= GameManager.Instance.currentLocation.batteryMultiplierBuy;
+        GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
     }
     public void BuyCirbuits()
     {
         GameManager.Instance.arts++;
-        GameManager.Instance.coins -= GameManager.Instance.currentLocation.circuitMultiplier;
+        GameManager.Instance.coins -= GameManager.Instance.currentLocation.circuitMultiplierBuy;
+        GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
     }
 
 
@@ -104,17 +112,20 @@ public class UIButtonScript : MonoBehaviour
     {
         GameManager.Instance.spices--;
         GameManager.Instance.coins += GameManager.Instance.currentLocation.nutMultiplier;
+GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
     }
 
     public void SellBatteries()
     {
         GameManager.Instance.salts--;
         GameManager.Instance.coins += GameManager.Instance.currentLocation.batteryMultiplier;
+GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
     }
     public void SellCirbuits()
     {
         GameManager.Instance.arts--;
         GameManager.Instance.coins += GameManager.Instance.currentLocation.circuitMultiplier;
+GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
     }
 
 
