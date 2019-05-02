@@ -29,14 +29,6 @@ public class UIButtonScript : MonoBehaviour
     }
 
 
-
-
-
-
-
-
-
-
     //    public GameObject movableUI;
     //    Vector3 startingPos;
     //    public GameObject lerpTarget;
@@ -44,7 +36,7 @@ public class UIButtonScript : MonoBehaviour
     //    public float lerpTime = .1f;
     //    bool isLerping = false;
     //    string textPosition = "lower";
-
+    //    public bool isMoving = false;
 
 
     //    // Start is called before the first frame update
@@ -57,34 +49,46 @@ public class UIButtonScript : MonoBehaviour
     //    // Update is called once per frame
     //    void Update()
     //    {
-
-    //        if (isLerping)
+    //        if(isMoving)
     //        {
-    //            if (transform.localPosition.y <= endingPos.y)
-    //            {
-    //                movableUI.transform.localPosition = Vector3.Lerp(startingPos, endingPos, Time.time / lerpTime);
-    //                //Debug.Log("lerp up");
+    //        RectTransform rtr = this.GetComponent<RectTransform>();
+    //        Vector2 endPos = new Vector2(rtr.anchoredPosition.x, rtr.anchoredPosition.y + 50f);
+    //        //rtr.anchoredPosition = Vector2.MoveTowards(rtr.anchoredPosition, endPos, 3f * Time.deltaTime);
+    //        rtr.anchoredPosition = new Vector2(rtr.anchoredPosition.x - 100f, rtr.anchoredPosition.y - 1000f);
 
-    //            } else if (transform.localPosition.y >= startingPos.y)
-    //            {
-    //                movableUI.transform.localPosition = Vector3.Lerp(endingPos, startingPos, Time.time / lerpTime);
-    //                //Debug.Log("lerp down");
-    //            }
     //        }
-    //    }
+    //    //if (isLerping)
+    //    //{
+    //    //    if (transform.localPosition.y <= endingPos.y)
+    //    //    {
+    //    //        movableUI.transform.localPosition = Vector3.Lerp(startingPos, endingPos, Time.time / lerpTime);
+    //    //        //Debug.Log("lerp up");
 
-    //    public void WhenClicked()
-    //    {
-    //        if (textPosition == "lower")
-    //        {
-    //            isLerping = true;
-    //            textPosition = "upper";
+    //    //    } else if (transform.localPosition.y >= startingPos.y)
+    //    //    {
+    //    //        movableUI.transform.localPosition = Vector3.Lerp(endingPos, startingPos, Time.time / lerpTime);
+    //    //        //Debug.Log("lerp down");
+    //    //    }
+    //    //}
+    //}
 
-    //        } else if (textPosition == "upper")
-    //        {
-    //            isLerping = true;
-    //            textPosition = "lower";
-    //        }
+        //public void WhenClicked()
+        //{
+        //RectTransform rtr = this.GetComponent<RectTransform>();
 
-    //    }
+        //Debug.Log(rtr.anchoredPosition);
+        //isMoving = !isMoving;
+
+        //    //if (textPosition == "lower")
+        //    //{
+        //    //    isLerping = true;
+        //    //    textPosition = "upper";
+
+        //    //} else if (textPosition == "upper")
+        //    //{
+        //    //    isLerping = true;
+        //    //    textPosition = "lower";
+        //    //}
+
+        //}
 }
