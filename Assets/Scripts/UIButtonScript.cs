@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIButtonScript : MonoBehaviour
 {
 
      Animator animator;
      public string buttonType;
+     public string good;
      public Location emptyLocation;
+     public Text changeableText;
 
     private void Start()
     {
@@ -16,9 +19,46 @@ public class UIButtonScript : MonoBehaviour
         {
             animator.SetBool("PressedBool", false);
         }
+      
     }
 
-   
+    private void Update()
+    {
+        if (GameManager.Instance.phaseOfLocation != "moving" && GameManager.Instance.phaseOfLocation != "leaving") {
+            if (buttonType == "sell")
+            {
+                if (good == "nut")
+                {
+                    changeableText.text = "$ " + GameManager.Instance.currentLocation.nutMultiplier.ToString();
+                }
+                else if (good == "battery")
+                {
+                    changeableText.text = "$ " + GameManager.Instance.currentLocation.batteryMultiplier.ToString();
+                }
+                else if (good == "circuit")
+                {
+                    changeableText.text = "$ " + GameManager.Instance.currentLocation.circuitMultiplier.ToString();
+                }
+            }
+            else if (buttonType == "buy")
+            {
+                if (good == "nut")
+                {
+                    changeableText.text = "$ " + GameManager.Instance.currentLocation.nutMultiplierBuy.ToString();
+                }
+                else if (good == "battery")
+                {
+                    changeableText.text = "$ " + GameManager.Instance.currentLocation.batteryMultiplierBuy.ToString();
+                }
+                else if (good == "circuit")
+                {
+                    changeableText.text = "$ " + GameManager.Instance.currentLocation.circuitMultiplierBuy.ToString();
+                }
+            }
+            }
+
+
+    }
 
     public void WhenCLicked()
     {
@@ -41,6 +81,40 @@ public class UIButtonScript : MonoBehaviour
         Camera.main.GetComponent<CameraScript>().atCity = false;
         GameManager.Instance.currentLocation = emptyLocation;
 
+    }
+
+    public void BuyNuts () {
+        GameManager.Instance.spices++;
+        GameManager.Instance.coins -= GameManager.Instance.currentLocation.nutMultiplierBuy;
+    }
+
+    public void BuyBatteries()
+    {
+        GameManager.Instance.salts++;
+        GameManager.Instance.coins -= GameManager.Instance.currentLocation.batteryMultiplier;
+    }
+    public void BuyCirbuits()
+    {
+        GameManager.Instance.arts++;
+        GameManager.Instance.coins -= GameManager.Instance.currentLocation.circuitMultiplier;
+    }
+
+
+    public void SellNuts()
+    {
+        GameManager.Instance.spices--;
+        GameManager.Instance.coins += GameManager.Instance.currentLocation.nutMultiplier;
+    }
+
+    public void SellBatteries()
+    {
+        GameManager.Instance.salts--;
+        GameManager.Instance.coins += GameManager.Instance.currentLocation.batteryMultiplier;
+    }
+    public void SellCirbuits()
+    {
+        GameManager.Instance.arts--;
+        GameManager.Instance.coins += GameManager.Instance.currentLocation.circuitMultiplier;
     }
 
 

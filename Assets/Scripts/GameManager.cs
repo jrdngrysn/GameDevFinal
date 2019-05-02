@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
      public int salts = 0;
      public int arts = 0;
      public int daysLeft = 15;
+     public TextMesh playerMoney;
+     public TextMesh merchantMoney;
 
     
     //bool tracks if the player has reached the end
@@ -156,6 +158,8 @@ public class GameManager : MonoBehaviour
                 merchantTableAnimator.SetBool("Shown", true);
                 exitButtonAnimator.SetBool("Shown", true);
                 hamburgerAnimator.SetBool("Active", false);
+                playerMoney.text = "$" + coins.ToString();
+                merchantMoney.text = "$" + coins.ToString();
                 Camera.main.GetComponent<CameraScript>().atCity = true;
                 if (playingPeopleSound == false)
                 {
@@ -205,7 +209,7 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     if (spices >= Mathf.Abs(currentLocation.sellWares.spiceChange))
                     {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.spiceMultiplier;
+                        coins += currentLocation.sellWares.coinChange * currentLocation.nutMultiplier;
                         spices += currentLocation.sellWares.spiceChange;
                         audioSource.PlayOneShot(moneySound);
                         phaseOfLocation = "sold";
@@ -221,7 +225,7 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     if (salts >= Mathf.Abs(currentLocation.sellWares.saltChange))
                     {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.saltMultiplier;
+                        coins += currentLocation.sellWares.coinChange * currentLocation.batteryMultiplier;
                         salts += currentLocation.sellWares.saltChange;
                         audioSource.PlayOneShot(moneySound);
                         phaseOfLocation = "sold";
@@ -236,7 +240,7 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     if (arts >= Mathf.Abs(currentLocation.sellWares.artChange))
                     {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.artMultiplier;
+                        coins += currentLocation.sellWares.coinChange * currentLocation.circuitMultiplier;
                         arts += currentLocation.sellWares.artChange;
                         audioSource.PlayOneShot(moneySound);
                         phaseOfLocation = "sold";
