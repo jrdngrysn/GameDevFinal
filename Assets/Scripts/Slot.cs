@@ -41,6 +41,7 @@ public class Slot : MonoBehaviour
             distanceCounter = 0;distance = Mathf.Abs(GameManager.Instance.currentLocation.locationSlot - slotNumber);
             GameManager.Instance.currentLocation = linkedLocation;
             subtracting = true;
+            GameManager.Instance.phaseOfLocation = "moving";
         }
     }
 

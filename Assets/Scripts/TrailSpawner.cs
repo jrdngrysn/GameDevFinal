@@ -30,25 +30,26 @@ public class TrailSpawner : MonoBehaviour
     void Update()
     {
         dotTimer += Time.deltaTime;
-
-        currentLocationCoords = GameObject.Find(GameManager.Instance.currentLocation.locationTitle + "(Clone)");
-
-        if (gameObject.transform.position.x != currentLocationCoords.transform.position.x && gameObject.transform.position.y != currentLocationCoords.transform.position.y)
+        if (GameManager.Instance.phaseOfLocation != "leaving")
         {
-            moving = true;
-           TrailMovement();
+            currentLocationCoords = GameObject.Find(GameManager.Instance.currentLocation.locationTitle + "(Clone)");
 
-            if (dotTimer > .3f)
+            if (gameObject.transform.position.x != currentLocationCoords.transform.position.x && gameObject.transform.position.y != currentLocationCoords.transform.position.y)
             {
-                SpawnDots();
-                dotTimer = 0;
+                moving = true;
+                TrailMovement();
+
+                if (dotTimer > .2f)
+                {
+                    SpawnDots();
+                    dotTimer = 0;
+                }
+            }
+            else
+            {
+                moving = false;
             }
         }
-        else
-        {
-            moving = false;
-        }
-
 
     }
 

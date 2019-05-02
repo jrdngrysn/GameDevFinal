@@ -18,7 +18,7 @@ public class DotScript : MonoBehaviour
     {
         if (GameManager.Instance.daysLeft > 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, GameManager.Instance.daysLeft / daysLeftWhenMade);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, .85f, 1f, GameManager.Instance.daysLeft / daysLeftWhenMade);
         }
     }
 }

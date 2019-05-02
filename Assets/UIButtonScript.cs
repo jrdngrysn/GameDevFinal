@@ -6,11 +6,16 @@ public class UIButtonScript : MonoBehaviour
 {
 
      Animator animator;
+     public string buttonType;
+     public Location emptyLocation;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetBool("PressedBool", false);
+        if (buttonType == "stat")
+        {
+            animator.SetBool("PressedBool", false);
+        }
     }
 
    
@@ -25,6 +30,16 @@ public class UIButtonScript : MonoBehaviour
         {
             animator.SetBool("PressedBool", false);
         }
+
+    }
+
+    public void LeaveClick ()
+    {
+        animator.SetBool("Shown", false);
+        Debug.Log("click");
+        GameManager.Instance.phaseOfLocation = "leaving";
+        Camera.main.GetComponent<CameraScript>().atCity = false;
+        GameManager.Instance.currentLocation = emptyLocation;
 
     }
 
@@ -72,23 +87,23 @@ public class UIButtonScript : MonoBehaviour
     //    //}
     //}
 
-        //public void WhenClicked()
-        //{
-        //RectTransform rtr = this.GetComponent<RectTransform>();
+    //public void WhenClicked()
+    //{
+    //RectTransform rtr = this.GetComponent<RectTransform>();
 
-        //Debug.Log(rtr.anchoredPosition);
-        //isMoving = !isMoving;
+    //Debug.Log(rtr.anchoredPosition);
+    //isMoving = !isMoving;
 
-        //    //if (textPosition == "lower")
-        //    //{
-        //    //    isLerping = true;
-        //    //    textPosition = "upper";
+    //    //if (textPosition == "lower")
+    //    //{
+    //    //    isLerping = true;
+    //    //    textPosition = "upper";
 
-        //    //} else if (textPosition == "upper")
-        //    //{
-        //    //    isLerping = true;
-        //    //    textPosition = "lower";
-        //    //}
+    //    //} else if (textPosition == "upper")
+    //    //{
+    //    //    isLerping = true;
+    //    //    textPosition = "lower";
+    //    //}
 
-        //}
+    //}
 }

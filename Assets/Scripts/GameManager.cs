@@ -65,8 +65,16 @@ public class GameManager : MonoBehaviour
 
     bool playingPeopleSound = false;
 
+
+    [Header("Animation Stuff")]
+
     public Animator playerTableAnimator;
     public Animator merchantTableAnimator;
+
+    public Animator exitButtonAnimator;
+
+    public GameObject hamburgerButton;
+    Animator hamburgerAnimator;
 
 
     // Start is called before the first frame update
@@ -77,6 +85,8 @@ public class GameManager : MonoBehaviour
         peopleSource.clip = peopleSound;
 
         currentLocation = Randomizer.Instance.locationSlots[Random.Range(0, Randomizer.Instance.locationSlots.Length)].GetComponent<Slot>().linkedLocation;
+
+        hamburgerAnimator = hamburgerButton.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -131,6 +141,9 @@ public class GameManager : MonoBehaviour
                 phaseOfLocation = "moving";
                 playerTableAnimator.SetBool("Shown", false);
                 merchantTableAnimator.SetBool("Shown", false);
+                exitButtonAnimator.SetBool("Shown", false);
+                hamburgerAnimator.SetBool("Active", true);
+                Camera.main.GetComponent<CameraScript>().atCity = false;
                 peopleSource.Stop();
                 locationTextField.text = movementText;
 
@@ -141,6 +154,9 @@ public class GameManager : MonoBehaviour
                 locationTextField.text = welcomeText;
                 playerTableAnimator.SetBool("Shown", true);
                 merchantTableAnimator.SetBool("Shown", true);
+                exitButtonAnimator.SetBool("Shown", true);
+                hamburgerAnimator.SetBool("Active", false);
+                Camera.main.GetComponent<CameraScript>().atCity = true;
                 if (playingPeopleSound == false)
                 {
                     peopleSource.Play();
@@ -153,6 +169,12 @@ public class GameManager : MonoBehaviour
                     audioSource.PlayOneShot(clickSound);
                     playingPeopleSound = false;
                 }
+            } else if (phaseOfLocation == "leaving")
+            {
+                playerTableAnimator.SetBool("Shown", false);
+                merchantTableAnimator.SetBool("Shown", false);
+                hamburgerAnimator.SetBool("Active", true);
+                peopleSource.Stop();
             }
             else if (phaseOfLocation == "activity")
             {
