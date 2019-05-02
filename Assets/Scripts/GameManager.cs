@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
 
     bool playingPeopleSound = false;
 
+    public Animator playerTableAnimator;
+    public Animator merchantTableAnimator;
 
 
     // Start is called before the first frame update
@@ -127,6 +129,8 @@ public class GameManager : MonoBehaviour
             if (TrailSpawner.Instance.moving == true)
             {
                 phaseOfLocation = "moving";
+                playerTableAnimator.SetBool("Shown", false);
+                merchantTableAnimator.SetBool("Shown", false);
                 peopleSource.Stop();
                 locationTextField.text = movementText;
 
@@ -135,6 +139,8 @@ public class GameManager : MonoBehaviour
             {
                 phaseOfLocation = "welcome";
                 locationTextField.text = welcomeText;
+                playerTableAnimator.SetBool("Shown", true);
+                merchantTableAnimator.SetBool("Shown", true);
                 if (playingPeopleSound == false)
                 {
                     peopleSource.Play();
