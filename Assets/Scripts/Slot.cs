@@ -5,7 +5,7 @@ using UnityEngine;
 public class Slot : MonoBehaviour
 {
     public Location linkedLocation;
-    public int slotNumber;
+    public int distFromStart;
     public int distanceCounter = 0;
     bool subtracting = false;
     int distance = 0;
@@ -14,7 +14,9 @@ public class Slot : MonoBehaviour
     void Start()
     {
         Instantiate(linkedLocation.locationInstance, transform);
-        linkedLocation.locationSlot = slotNumber;
+        linkedLocation.locationSlot = distFromStart;
+
+        linkedLocation.merchantMoney = Random.Range(17, 138);
 
     }
     private void Update()
@@ -38,7 +40,16 @@ public class Slot : MonoBehaviour
     {
         if (GameManager.Instance.phaseOfLocation != "moving")
         {
-            distanceCounter = 0;distance = Mathf.Abs(GameManager.Instance.currentLocation.locationSlot - slotNumber);
+            distanceCounter = 0;
+
+            if (distFromStart != GameManager.Instance.currentLocation.locationSlot)
+            {
+                distance = Mathf.Abs(GameManager.Instance.currentLocation.locationSlot - distFromStart) + 1;
+            }
+            else
+            {
+                distance = 2;
+            }
             GameManager.Instance.currentLocation = linkedLocation;
             subtracting = true;
             GameManager.Instance.phaseOfLocation = "moving";

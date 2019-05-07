@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Akasea
   m_EditorClassIdentifier: 
   locationTitle: The Walled City of Akasea
-  locationSlot: 6
-  locationInstance: {fileID: 3034727962120228646, guid: a33cc20d250de4e0b8e97c0c3c9d9a06,
+  locationSlot: 3
+  locationInstance: {fileID: 6062047229783672019, guid: d614c0b5821af4d75a69b8c98a5dc456,
     type: 3}
   nutMultiplier: 2
   batteryMultiplier: 3
@@ -22,7 +22,7 @@ MonoBehaviour:
   nutMultiplierBuy: 3
   batteryMultiplierBuy: 4
   circuitMultiplierBuy: 3
-  merchantMoney: 190
+  merchantMoney: 32
   sellWares:
     activityDescription: We don't get many people in or out here. We'll buy spices
       for 9 gold each. Salt for 5, and art for 6.

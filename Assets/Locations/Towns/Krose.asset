@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Krose
   m_EditorClassIdentifier: 
   locationTitle: Krose
-  spiceMultiplier: 5
-  saltMultiplier: 2
-  artMultiplier: 3
+  locationSlot: 1
+  locationInstance: {fileID: 1955963255343427794, guid: c8049938fcde04e42869f58504b5d479,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 91
   sellWares:
     activityDescription: Hi there, we don't have much need for salt becuase we have
       a new road straight to New Tarbury, but we'll buy it for 2 gold a bag. We will

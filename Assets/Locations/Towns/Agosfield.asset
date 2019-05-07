@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Agosfield
   m_EditorClassIdentifier: 
   locationTitle: Agosfield
-  spiceMultiplier: 6
-  saltMultiplier: 3
-  artMultiplier: 3
+  locationSlot: 0
+  locationInstance: {fileID: 2657258648368520261, guid: cad88a732dd714928b4c03156e241106,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 0
   sellWares:
     activityDescription: Hey there! We'll buy salt for 3 gold, art for 3 gold, and
       spices for 6.

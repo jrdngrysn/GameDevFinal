@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Ardas
   m_EditorClassIdentifier: 
   locationTitle: Ardas
-  spiceMultiplier: 6
-  saltMultiplier: 7
-  artMultiplier: 4
+  locationSlot: 0
+  locationInstance: {fileID: 8700914859622986591, guid: 9a2d3a4481c834e6b8de75131865ac99,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 0
   sellWares:
     activityDescription: If you sell us 2 bags of salt we'll pay you 7 gold. We also
       pay 6 for spices and 4 for art.

@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Sigmard
   m_EditorClassIdentifier: 
   locationTitle: Sigmard
-  spiceMultiplier: 8
-  saltMultiplier: 3
-  artMultiplier: 3
+  locationSlot: 3
+  locationInstance: {fileID: 787018485866559914, guid: 52879505f26f441b0b484dc91f37359a,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 130
   sellWares:
     activityDescription: We buy spices for 8 gold, and salt and art for 3 each. We
       get our salt from Qard, they have the best price in the land.

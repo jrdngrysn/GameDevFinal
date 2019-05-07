@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Pearough
   m_EditorClassIdentifier: 
   locationTitle: Pearough
-  locationSlot: 5
-  locationInstance: {fileID: 7631155461311675410, guid: d1dbad030f2374164b3207a200bdf3bf,
+  locationSlot: 6
+  locationInstance: {fileID: 4195429225740540716, guid: ee0e58e898d7743399982395970dcd11,
     type: 3}
-  nutMultiplier: 5
-  batteryMultiplier: 5
+  nutMultiplier: 3
+  batteryMultiplier: 3
   circuitMultiplier: 5
-  nutMultiplierBuy: 2
+  nutMultiplierBuy: 4
   batteryMultiplierBuy: 4
-  circuitMultiplierBuy: 2
-  merchantMoney: 55
+  circuitMultiplierBuy: 5
+  merchantMoney: 115
   sellWares:
     activityDescription: Hello there! In Pearough we get our salt from nearby, but
       if you can sell in bulk, we'll pay well. We pay 11 gold for 3 bags of salt,

@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Qard
   m_EditorClassIdentifier: 
   locationTitle: Qard
-  spiceMultiplier: 9
-  saltMultiplier: 1
-  artMultiplier: 3
+  locationSlot: 3
+  locationInstance: {fileID: 2840826958721105001, guid: 0fc105dc3a53a442aba3ba8b68cedcab,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 43
   sellWares:
     activityDescription: Gods bless you. We buy spices and sell the best priced salt
       in the land. We'll buy spices for 9, salt for 1, and art for 3.

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Kifi
   m_EditorClassIdentifier: 
   locationTitle: Kifi
-  locationSlot: 2
-  locationInstance: {fileID: 6851368706334238921, guid: 1cb711c06be7647aa96deb5eeb9f7217,
+  locationSlot: 7
+  locationInstance: {fileID: 4230297545184187192, guid: 646beb3c7b1904a6fb150b9dcc56fc68,
     type: 3}
-  nutMultiplier: 1
-  batteryMultiplier: 1
-  circuitMultiplier: 1
-  nutMultiplierBuy: 2
-  batteryMultiplierBuy: 2
-  circuitMultiplierBuy: 0
-  merchantMoney: 20
+  nutMultiplier: 5
+  batteryMultiplier: 6
+  circuitMultiplier: 4
+  nutMultiplierBuy: 7
+  batteryMultiplierBuy: 8
+  circuitMultiplierBuy: 9
+  merchantMoney: 46
   sellWares:
     activityDescription: Bless your soul. In Kifi we buy spice for 7 gold, salt for
       4, and art for 5.

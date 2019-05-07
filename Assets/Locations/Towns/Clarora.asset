@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Clarora
   m_EditorClassIdentifier: 
   locationTitle: Clarora
-  spiceMultiplier: 8
-  saltMultiplier: 4
-  artMultiplier: 5
+  locationSlot: 8
+  locationInstance: {fileID: 8563924398349143962, guid: 8c351f7ee27a34a22863b93734fd5ec4,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 85
   sellWares:
     activityDescription: Hello there. We buy spices for 8, salt for 4, and art for
       5.

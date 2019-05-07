@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     void ManageStatText ()
     {
-        statTextField.text ="Coins: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
+        statTextField.text ="$: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
     }
 
     void ManageLocationText()

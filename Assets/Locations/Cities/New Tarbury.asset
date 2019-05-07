@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: New Tarbury
   m_EditorClassIdentifier: 
   locationTitle: New Tarbury
-  locationSlot: 3
-  locationInstance: {fileID: 8170704898731478374, guid: f83d5995923fa4a1c8360371b7da45fe,
+  locationSlot: 6
+  locationInstance: {fileID: 8178772136242114304, guid: 09bd604919ed541bf829f7997e3ee1c3,
     type: 3}
-  nutMultiplier: 2
-  batteryMultiplier: 3
-  circuitMultiplier: 1
-  nutMultiplierBuy: 4
-  batteryMultiplierBuy: 3
-  circuitMultiplierBuy: 1
-  merchantMoney: 100
+  nutMultiplier: 7
+  batteryMultiplier: 5
+  circuitMultiplier: 4
+  nutMultiplierBuy: 5
+  batteryMultiplierBuy: 4
+  circuitMultiplierBuy: 3
+  merchantMoney: 73
   sellWares:
     activityDescription: New Tarbury has plenty of salt. What we really like is some
       fine art, the seaside villages of the west have some nice things. We pay 1 gold

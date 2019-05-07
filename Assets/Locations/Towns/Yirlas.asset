@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Yirlas
   m_EditorClassIdentifier: 
   locationTitle: Yirlas
-  spiceMultiplier: 6
-  saltMultiplier: 3
-  artMultiplier: 2
+  locationSlot: 1
+  locationInstance: {fileID: 3600526614129306060, guid: 81a55467b47cb41ad84a78b04f244b15,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 94
   sellWares:
     activityDescription: We'll buy spices for 6 gold if you have em. We'll also take
       salt for 3 and art for 2.

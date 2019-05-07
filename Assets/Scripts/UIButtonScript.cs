@@ -18,7 +18,7 @@ public class UIButtonScript : MonoBehaviour
         animator = GetComponent<Animator>();
         if (buttonType == "stat")
         {
-            animator.SetBool("PressedBool", false);
+            animator.SetBool("PressedBool", true);
         }
       
     }
@@ -89,43 +89,61 @@ public class UIButtonScript : MonoBehaviour
     }
 
     public void BuyNuts () {
-        GameManager.Instance.spices++;
-        GameManager.Instance.coins -= GameManager.Instance.currentLocation.nutMultiplierBuy;
-        GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
+        if (GameManager.Instance.currentLocation.merchantMoney > 0 && GameManager.Instance.coins > 0)
+        {
+            GameManager.Instance.spices++;
+            GameManager.Instance.coins -= GameManager.Instance.currentLocation.nutMultiplierBuy;
+            GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
+        }
     }
 
     public void BuyBatteries()
     {
-        GameManager.Instance.salts++;
-        GameManager.Instance.coins -= GameManager.Instance.currentLocation.batteryMultiplierBuy;
-        GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
-    }
+        if (GameManager.Instance.currentLocation.merchantMoney > 0 && GameManager.Instance.coins > 0)
+        {
+            GameManager.Instance.salts++;
+            GameManager.Instance.coins -= GameManager.Instance.currentLocation.batteryMultiplierBuy;
+            GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
+        }
+        }
     public void BuyCirbuits()
     {
-        GameManager.Instance.arts++;
-        GameManager.Instance.coins -= GameManager.Instance.currentLocation.circuitMultiplierBuy;
-        GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
+        if (GameManager.Instance.currentLocation.merchantMoney > 0 && GameManager.Instance.coins > 0)
+        {
+            GameManager.Instance.arts++;
+            GameManager.Instance.coins -= GameManager.Instance.currentLocation.circuitMultiplierBuy;
+            GameManager.Instance.currentLocation.merchantMoney += GameManager.Instance.currentLocation.nutMultiplierBuy;
+        }
     }
 
 
     public void SellNuts()
     {
-        GameManager.Instance.spices--;
-        GameManager.Instance.coins += GameManager.Instance.currentLocation.nutMultiplier;
-GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
+        if (GameManager.Instance.spices > 0 && GameManager.Instance.currentLocation.merchantMoney > 0)
+        {
+            GameManager.Instance.spices--;
+            GameManager.Instance.coins += GameManager.Instance.currentLocation.nutMultiplier;
+            GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
+        }
     }
 
     public void SellBatteries()
     {
-        GameManager.Instance.salts--;
-        GameManager.Instance.coins += GameManager.Instance.currentLocation.batteryMultiplier;
-GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
+        if (GameManager.Instance.salts > 0 && GameManager.Instance.currentLocation.merchantMoney > 0)
+        {
+            GameManager.Instance.salts--;
+            GameManager.Instance.coins += GameManager.Instance.currentLocation.batteryMultiplier;
+            GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
+        }
     }
     public void SellCirbuits()
     {
-        GameManager.Instance.arts--;
-        GameManager.Instance.coins += GameManager.Instance.currentLocation.circuitMultiplier;
-GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
+        if (GameManager.Instance.arts > 0 && GameManager.Instance.currentLocation.merchantMoney > 0)
+        {
+            GameManager.Instance.arts--;
+            GameManager.Instance.coins += GameManager.Instance.currentLocation.circuitMultiplier;
+            GameManager.Instance.currentLocation.merchantMoney -= GameManager.Instance.currentLocation.nutMultiplier;
+        }
     }
 
 

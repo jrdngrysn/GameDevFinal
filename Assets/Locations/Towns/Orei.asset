@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: Orei
   m_EditorClassIdentifier: 
   locationTitle: Orei
-  spiceMultiplier: 5
-  saltMultiplier: 3
-  artMultiplier: 4
+  locationSlot: 0
+  locationInstance: {fileID: 3461002033929006258, guid: 58102426fee474704ad4fd6773c10be5,
+    type: 3}
+  nutMultiplier: 0
+  batteryMultiplier: 0
+  circuitMultiplier: 0
+  nutMultiplierBuy: 0
+  batteryMultiplierBuy: 0
+  circuitMultiplierBuy: 0
+  merchantMoney: 65
   sellWares:
     activityDescription: We buy spice for 5 gold, salt for 3, and art for 4.
     activityResult: Thank you for the goods.
