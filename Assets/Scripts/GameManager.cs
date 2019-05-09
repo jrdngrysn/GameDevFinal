@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     //tracking the current question
     public Location currentLocation;
+
     public string prevLocationName;
 
     //setting up singleton of game manager
@@ -64,6 +65,14 @@ public class GameManager : MonoBehaviour
 
     public AudioClip alarmSound;
 
+    public AudioClip blipSound;
+
+    public AudioClip robotSound;
+
+    public AudioClip wrongSound;
+
+    int soundTimer = 0;
+
     bool playedAlarmSound = false;
 
     public AudioSource peopleSource;
@@ -72,6 +81,9 @@ public class GameManager : MonoBehaviour
 
     bool playingPeopleSound = false;
 
+    public GameObject oldWorldText;
+    public GameObject winWorldText;
+    public GameObject loseWorldText;
 
     [Header("Animation Stuff")]
 
@@ -92,7 +104,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
         peopleSource.clip = peopleSound;
 
-        currentLocation = Randomizer.Instance.locationSlots[Random.Range(0, 2)].GetComponent<Slot>().linkedLocation;
+        firstLocation = Randomizer.Instance.locationSlots[Random.Range(0, 2)].GetComponent<Slot>().linkedLocation;
+        
 
         hamburgerAnimator = hamburgerButton.GetComponent<Animator>();
     }
@@ -127,6 +140,26 @@ public class GameManager : MonoBehaviour
         audioSource.PlayOneShot(clickSound);
     }
 
+    public void PlayMoneySound()
+    {
+        audioSource.PlayOneShot(moneySound);
+    }
+    public void PlayWrongSound()
+    {
+        audioSource.PlayOneShot(wrongSound);
+    }
+
+    public void PlayBlipSound()
+    {
+        audioSource.PlayOneShot(blipSound);
+    }
+
+    public void PlayRobotSound()
+    {
+        audioSource.PlayOneShot(robotSound);
+    }
+
+
     void ManageLocationText()
     {
         if (currentLocation.locationTitle == "The Old World")
@@ -141,7 +174,7 @@ public class GameManager : MonoBehaviour
                 playedAlarmSound = true;
             }
 
-            if (coins >= 50)
+            if (coins >= 500)
             {
                 EndGameWin();
             }
@@ -182,18 +215,24 @@ public class GameManager : MonoBehaviour
                 playerMoney.text = "$" + coins.ToString();
                 merchantMoney.text = "$" + currentLocation.merchantMoney.ToString();
                 Camera.main.GetComponent<CameraScript>().atCity = true;
+
                 if (playingPeopleSound == false)
                 {
                     peopleSource.Play();
                     playingPeopleSound = true;
                 }
 
-                if (Input.GetKeyUp(KeyCode.Alpha1))
+                if (soundTimer < 450)
                 {
-                    phaseOfLocation = "activity";
-                    audioSource.PlayOneShot(clickSound);
-                    playingPeopleSound = false;
+                    soundTimer++;
                 }
+                else
+                {
+                    PlayRobotSound();
+                    soundTimer = 0;
+                }
+
+
             } else if (phaseOfLocation == "leaving")
             {
                 playerTableAnimator.SetBool("Shown", false);
@@ -201,305 +240,290 @@ public class GameManager : MonoBehaviour
                 hamburgerAnimator.SetBool("Active", true);
                 peopleSource.Stop();
             }
-            else if (phaseOfLocation == "activity")
-            {
-                locationTextField.text = activityText;
+            //else if (phaseOfLocation == "activity")
+            //{
+            //    locationTextField.text = activityText;
 
-                if (Input.GetKeyUp(KeyCode.Alpha1))
-                {
-                    phaseOfLocation = "sell";
-                    audioSource.PlayOneShot(clickSound);
+            //    if (Input.GetKeyUp(KeyCode.Alpha1))
+            //    {
+            //        phaseOfLocation = "sell";
+            //        audioSource.PlayOneShot(clickSound);
 
-                }
-                else if (Input.GetKeyUp(KeyCode.Alpha2))
-                {
-                    phaseOfLocation = "buy";
-                    audioSource.PlayOneShot(clickSound);
-                }
-                else if (Input.GetKeyUp(KeyCode.Alpha3))
-                {
-                    phaseOfLocation = "leave";
-                    audioSource.PlayOneShot(clickSound);
-                }
-            }
-            else if (phaseOfLocation == "sell")
-            {
-                locationTextField.text = currentLocation.sellWares.activityDescription + "\n1. Sell Spices" + "\n2. Sell Salts" + "\n3. Sell Art" + "\n4. Back";
-                if (Input.GetKeyUp(KeyCode.Alpha1))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    if (spices >= Mathf.Abs(currentLocation.sellWares.spiceChange))
-                    {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.nutMultiplier;
-                        spices += currentLocation.sellWares.spiceChange;
-                        audioSource.PlayOneShot(moneySound);
-                        phaseOfLocation = "sold";
-                    }
-                    else
-                    {
-                        phaseOfLocation = "not enough";
-                    }
+            //    }
+            //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+            //    {
+            //        phaseOfLocation = "buy";
+            //        audioSource.PlayOneShot(clickSound);
+            //    }
+            //    else if (Input.GetKeyUp(KeyCode.Alpha3))
+            //    {
+            //        phaseOfLocation = "leave";
+            //        audioSource.PlayOneShot(clickSound);
+            //    }
+            //}
+            //else if (phaseOfLocation == "sell")
+            //{
+            //    locationTextField.text = currentLocation.sellWares.activityDescription + "\n1. Sell Spices" + "\n2. Sell Salts" + "\n3. Sell Art" + "\n4. Back";
+            //    if (Input.GetKeyUp(KeyCode.Alpha1))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        if (spices >= Mathf.Abs(currentLocation.sellWares.spiceChange))
+            //        {
+            //            coins += currentLocation.sellWares.coinChange * currentLocation.nutMultiplier;
+            //            spices += currentLocation.sellWares.spiceChange;
+            //            audioSource.PlayOneShot(moneySound);
+            //            phaseOfLocation = "sold";
+            //        }
+            //        else
+            //        {
+            //            phaseOfLocation = "not enough";
+            //        }
 
-                }
-                else if (Input.GetKeyUp(KeyCode.Alpha2))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    if (salts >= Mathf.Abs(currentLocation.sellWares.saltChange))
-                    {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.batteryMultiplier;
-                        salts += currentLocation.sellWares.saltChange;
-                        audioSource.PlayOneShot(moneySound);
-                        phaseOfLocation = "sold";
-                    }
-                    else
-                    {
-                        phaseOfLocation = "not enough";
-                    }
-                }
-                else if (Input.GetKeyUp(KeyCode.Alpha3))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    if (arts >= Mathf.Abs(currentLocation.sellWares.artChange))
-                    {
-                        coins += currentLocation.sellWares.coinChange * currentLocation.circuitMultiplier;
-                        arts += currentLocation.sellWares.artChange;
-                        audioSource.PlayOneShot(moneySound);
-                        phaseOfLocation = "sold";
-                    }
-                    else
-                    {
-                        phaseOfLocation = "not enough";
-                    }
-                }
-                else if (Input.GetKeyUp(KeyCode.Alpha4))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    phaseOfLocation = "activity";
-                }
-            }
-            else if (phaseOfLocation == "buy")
-            {
-                locationTextField.text = currentLocation.buyWares.activityDescription + "\n1. Buy Goods" + "\n2. Back";
-                if (Input.GetKeyUp(KeyCode.Alpha1))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    if (coins >= Mathf.Abs(currentLocation.buyWares.coinChange))
-                    {
-                        coins += currentLocation.buyWares.coinChange;
-                        spices += currentLocation.buyWares.spiceChange;
-                        salts += currentLocation.buyWares.saltChange;
-                        arts += currentLocation.buyWares.artChange;
-                        audioSource.PlayOneShot(moneySound);
-                        phaseOfLocation = "bought";
-                    }
-                    else
-                    {
-                        phaseOfLocation = "not enough";
-                    }
+            //    }
+            //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        if (salts >= Mathf.Abs(currentLocation.sellWares.saltChange))
+            //        {
+            //            coins += currentLocation.sellWares.coinChange * currentLocation.batteryMultiplier;
+            //            salts += currentLocation.sellWares.saltChange;
+            //            audioSource.PlayOneShot(moneySound);
+            //            phaseOfLocation = "sold";
+            //        }
+            //        else
+            //        {
+            //            phaseOfLocation = "not enough";
+            //        }
+            //    }
+            //    else if (Input.GetKeyUp(KeyCode.Alpha3))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        if (arts >= Mathf.Abs(currentLocation.sellWares.artChange))
+            //        {
+            //            coins += currentLocation.sellWares.coinChange * currentLocation.circuitMultiplier;
+            //            arts += currentLocation.sellWares.artChange;
+            //            audioSource.PlayOneShot(moneySound);
+            //            phaseOfLocation = "sold";
+            //        }
+            //        else
+            //        {
+            //            phaseOfLocation = "not enough";
+            //        }
+            //    }
+            //    else if (Input.GetKeyUp(KeyCode.Alpha4))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        phaseOfLocation = "activity";
+            //    }
+            //}
+            //else if (phaseOfLocation == "buy")
+            //{
+            //    locationTextField.text = currentLocation.buyWares.activityDescription + "\n1. Buy Goods" + "\n2. Back";
+            //    if (Input.GetKeyUp(KeyCode.Alpha1))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        if (coins >= Mathf.Abs(currentLocation.buyWares.coinChange))
+            //        {
+            //            coins += currentLocation.buyWares.coinChange;
+            //            spices += currentLocation.buyWares.spiceChange;
+            //            salts += currentLocation.buyWares.saltChange;
+            //            arts += currentLocation.buyWares.artChange;
+            //            audioSource.PlayOneShot(moneySound);
+            //            phaseOfLocation = "bought";
+            //        }
+            //        else
+            //        {
+            //            phaseOfLocation = "not enough";
+            //        }
 
-                }
-                else if (Input.GetKeyUp(KeyCode.Alpha2))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    phaseOfLocation = "activity";
-                }
-            }
-            else if (phaseOfLocation == "sold")
-            {
-                locationTextField.text = currentLocation.sellWares.activityResult + "\n 1. Back";
+            //    }
+            //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        phaseOfLocation = "activity";
+            //    }
+            //}
+            //else if (phaseOfLocation == "sold")
+            //{
+            //    locationTextField.text = currentLocation.sellWares.activityResult + "\n 1. Back";
 
 
-                if (Input.GetKeyUp(KeyCode.Alpha1))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    phaseOfLocation = "activity";
+            //    if (Input.GetKeyUp(KeyCode.Alpha1))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        phaseOfLocation = "activity";
 
-                }
+            //    }
 
-            }
-            else if (phaseOfLocation == "bought")
-            {
-                locationTextField.text = currentLocation.buyWares.activityResult + "\n 1. Back";
+            //}
+            //else if (phaseOfLocation == "bought")
+            //{
+            //    locationTextField.text = currentLocation.buyWares.activityResult + "\n 1. Back";
 
-                if (Input.GetKeyUp(KeyCode.Alpha1))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    phaseOfLocation = "activity";
+            //    if (Input.GetKeyUp(KeyCode.Alpha1))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        phaseOfLocation = "activity";
 
-                }
+            //    }
 
-            }
-            else if (phaseOfLocation == "not enough")
-            {
-                locationTextField.text = "You dont have enough for that. \n1. Back";
-                if (Input.GetKeyUp(KeyCode.Alpha1))
-                {
-                    audioSource.PlayOneShot(clickSound);
-                    phaseOfLocation = "activity";
-                }
-            }
-            else if (phaseOfLocation == "leave")
-            {
-                if (currentLocation.locations.Length == 1)
-                {
-                    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. Back";
-                    if (Input.GetKeyUp(KeyCode.Alpha1))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[0];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha2))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "activity";
-                    }
-                }
-                else if (currentLocation.locations.Length == 2)
-                {
-                    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. " + currentLocation.locations[1].locationTitle + "\n3. Back";
-                    if (Input.GetKeyUp(KeyCode.Alpha1))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[0];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha2))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[1];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha3))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "activity";
-                    }
-                }
-                else if (currentLocation.locations.Length == 3)
-                {
-                    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. " + currentLocation.locations[1].locationTitle + "\n3. " + currentLocation.locations[2].locationTitle + "\n4. Back";
-                    if (Input.GetKeyUp(KeyCode.Alpha1))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[0];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha2))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                       //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[1];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha3))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[2];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha4))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "activity";
-                    }
-                }
-                else if (currentLocation.locations.Length == 4)
-                {
-                    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. " + currentLocation.locations[1].locationTitle + "\n3. " + currentLocation.locations[2].locationTitle + "\n4. " + currentLocation.locations[3].locationTitle + "\n5. Back";
-                    if (Input.GetKeyUp(KeyCode.Alpha1))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[0];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha2))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[1];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha3))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[2];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha4))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        //phaseOfLocation = "moving";
-                        daysLeft--;
-                        currentLocation = currentLocation.locations[3];
-                    }
-                    else if (Input.GetKeyUp(KeyCode.Alpha5))
-                    {
-                        audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "activity";
-                    }
-                }
+            //}
+            //else if (phaseOfLocation == "not enough")
+            //{
+            //    locationTextField.text = "You dont have enough for that. \n1. Back";
+            //    if (Input.GetKeyUp(KeyCode.Alpha1))
+            //    {
+            //        audioSource.PlayOneShot(clickSound);
+            //        phaseOfLocation = "activity";
+            //    }
+            //}
+            //else if (phaseOfLocation == "leave")
+            //{
+                //if (currentLocation.locations.Length == 1)
+                //{
+                //    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. Back";
+                //    if (Input.GetKeyUp(KeyCode.Alpha1))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[0];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        phaseOfLocation = "activity";
+                //    }
+                //}
+                //else if (currentLocation.locations.Length == 2)
+                //{
+                //    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. " + currentLocation.locations[1].locationTitle + "\n3. Back";
+                //    if (Input.GetKeyUp(KeyCode.Alpha1))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[0];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[1];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha3))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        phaseOfLocation = "activity";
+                //    }
+                //}
+                //else if (currentLocation.locations.Length == 3)
+                //{
+                //    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. " + currentLocation.locations[1].locationTitle + "\n3. " + currentLocation.locations[2].locationTitle + "\n4. Back";
+                //    if (Input.GetKeyUp(KeyCode.Alpha1))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[0];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //       //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[1];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha3))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[2];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha4))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        phaseOfLocation = "activity";
+                //    }
+                //}
+                //else if (currentLocation.locations.Length == 4)
+                //{
+                //    locationTextField.text = currentLocation.leave.activityDescription + " From here you can go to:" + "\n1. " + currentLocation.locations[0].locationTitle + "\n2. " + currentLocation.locations[1].locationTitle + "\n3. " + currentLocation.locations[2].locationTitle + "\n4. " + currentLocation.locations[3].locationTitle + "\n5. Back";
+                //    if (Input.GetKeyUp(KeyCode.Alpha1))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[0];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[1];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha3))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[2];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha4))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        //phaseOfLocation = "moving";
+                //        daysLeft--;
+                //        currentLocation = currentLocation.locations[3];
+                //    }
+                //    else if (Input.GetKeyUp(KeyCode.Alpha5))
+                //    {
+                //        audioSource.PlayOneShot(clickSound);
+                //        phaseOfLocation = "activity";
+                //    }
+                //}
 
-            }
+           //    }
         }
     }
 
     void TheOldWorldText ()
     {
+        phaseOfLocation = "moving";
+        oldWorldText.SetActive(true);
 
-        locationTextField.text = startingText[outOfGameTextTrack] + "\n1. Continue";
-
-        if(Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetMouseButtonDown (0))
         {
-            audioSource.PlayOneShot(clickSound);
-            outOfGameTextTrack++;
-        }
-
-        if (outOfGameTextTrack > 4)
-        {
+            oldWorldText.SetActive(false);
             currentLocation = firstLocation;
-            outOfGameTextTrack = 0;
+            PlayClickSound();
         }
 
     }
 
     void EndGameWin ()
     {
-        locationTextField.text = winText[outOfGameTextTrack] + "\n1. Continue";
+        phaseOfLocation = "moving";
+        winWorldText.SetActive(true);
 
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetMouseButtonDown(0))
         {
-            audioSource.PlayOneShot(clickSound);
-            outOfGameTextTrack++;
-        }
-
-        if (outOfGameTextTrack > 4)
-        {
-            outOfGameTextTrack = 0;
             SceneManager.LoadScene("StartScene");
         }
+
+
     }
 
     void EndGameLose () 
     {
-        locationTextField.text = loseText[outOfGameTextTrack] + "\n1. Continue";
+        phaseOfLocation = "moving";
+        loseWorldText.SetActive(true);
 
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetMouseButtonDown(0))
         {
-            audioSource.PlayOneShot(clickSound);
-            outOfGameTextTrack++;
-        }
-
-        if (outOfGameTextTrack > 4)
-        {
-            outOfGameTextTrack = 0;
             SceneManager.LoadScene("StartScene");
         }
     }

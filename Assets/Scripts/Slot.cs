@@ -167,6 +167,7 @@ public class Slot : MonoBehaviour
 
         if (GameManager.Instance.phaseOfLocation == "leaving")
         {
+            GameManager.Instance.PlayBlipSound();
             distanceCounter = 0;
             if (GameManager.Instance.prevLocationName != linkedLocation.locationTitle)
             {

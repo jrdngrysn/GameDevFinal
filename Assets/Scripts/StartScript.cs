@@ -14,9 +14,9 @@ public class StartScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("RandomizedScene");
         }
     }
 }
