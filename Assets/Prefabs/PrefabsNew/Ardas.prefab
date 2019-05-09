@@ -25,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564244745198036194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3750012, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: 4.0188956, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.5447845, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 9118882816004943855}
-  m_RootOrder: 4
+  m_Father: {fileID: 5110916923961102367}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1966989635686436569
 SpriteRenderer:
@@ -105,11 +105,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2799386053659993897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 1.13, z: -6}
-  m_LocalScale: {x: 0.65999997, y: 0.65999997, z: 1}
+  m_LocalPosition: {x: -5.622548, y: 3.6762903, z: -3.04}
+  m_LocalScale: {x: 4.2850823, y: 3.588322, z: 1}
   m_Children: []
-  m_Father: {fileID: 9118882816004943855}
-  m_RootOrder: 1
+  m_Father: {fileID: 5110916923961102367}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3714405862392794563
 MeshRenderer:
@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5110916923961102367}
   - component: {fileID: 7201501120490534244}
+  - component: {fileID: 4025876008906118403}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -276,9 +277,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.756, y: 0.45381996, z: -2.96}
   m_LocalScale: {x: 0.15402271, y: 0.18393, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6605192601126662113}
+  - {fileID: 218768114426587458}
+  - {fileID: 3788764946039817718}
+  - {fileID: 8914146929508055138}
   m_Father: {fileID: 9118882816004943855}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7201501120490534244
 SpriteRenderer:
@@ -328,6 +333,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4025876008906118403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600915278697523168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af10c3d1664f44e5c93b6deb46a2afda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &7255541530532181419
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,11 +371,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255541530532181419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1249977, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -4.0968137, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.5447845, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 9118882816004943855}
-  m_RootOrder: 2
+  m_Father: {fileID: 5110916923961102367}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &477976639717932010
 SpriteRenderer:
@@ -432,11 +450,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7481073304179697417}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7499994, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -0.03895944, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.5447845, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 9118882816004943855}
-  m_RootOrder: 3
+  m_Father: {fileID: 5110916923961102367}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9036101457907711852
 SpriteRenderer:
@@ -515,10 +533,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8129152603133946109}
-  - {fileID: 6605192601126662113}
-  - {fileID: 218768114426587458}
-  - {fileID: 3788764946039817718}
-  - {fileID: 8914146929508055138}
   - {fileID: 5110916923961102367}
   m_Father: {fileID: 0}
   m_RootOrder: 0

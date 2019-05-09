@@ -13,6 +13,11 @@ public class Location : ScriptableObject
 
     public GameObject locationInstance;
 
+    [Header("Products")]
+    public bool nuts;
+    public bool batteries;
+    public bool circuits;
+
     [Header("Sell Values")]
     public int nutMultiplier;
     public int batteryMultiplier;
@@ -23,8 +28,12 @@ public class Location : ScriptableObject
     public int batteryMultiplierBuy;
     public int circuitMultiplierBuy;
 
-    [Header("Money")]
+    [Header("Money & Resources")]
     public int merchantMoney;
+
+    public int nutCount;
+    public int batteryCount;
+    public int circuitCount;
 
     [Header("Things to do")]
     public Activity sellWares;

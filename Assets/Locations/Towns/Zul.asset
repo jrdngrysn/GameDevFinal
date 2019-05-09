@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Zul
   m_EditorClassIdentifier: 
   locationTitle: Zul
-  locationSlot: 3
+  locationSlot: 6
   locationInstance: {fileID: 3775550789014254654, guid: d9805fc6dbbe447318e900694570e51f,
     type: 3}
-  nutMultiplier: 0
-  batteryMultiplier: 0
-  circuitMultiplier: 0
-  nutMultiplierBuy: 0
-  batteryMultiplierBuy: 0
-  circuitMultiplierBuy: 0
-  merchantMoney: 44
+  nuts: 1
+  batteries: 0
+  circuits: 1
+  nutMultiplier: 30
+  batteryMultiplier: 50
+  circuitMultiplier: 50
+  nutMultiplierBuy: 40
+  batteryMultiplierBuy: 70
+  circuitMultiplierBuy: 50
+  merchantMoney: 129
+  nutCount: 2
+  batteryCount: 0
+  circuitCount: 3
   sellWares:
     activityDescription: We loves spices in Zul, although maybe not as much as Kheuridge.
       We will buy spices for 9, salt for 4, and art for 3.

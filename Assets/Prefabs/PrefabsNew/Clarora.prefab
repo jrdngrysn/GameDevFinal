@@ -104,11 +104,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3656934514977264054}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3750012, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: 3.9430866, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.510058, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 40287881079126293}
-  m_RootOrder: 4
+  m_Father: {fileID: 4833583155472750007}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2790494752735439153
 SpriteRenderer:
@@ -168,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833583155472750007}
   - component: {fileID: 6708891872322893772}
+  - component: {fileID: 6212753660105712957}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -185,9 +186,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.763, y: 0.45381996, z: -2.96}
   m_LocalScale: {x: 0.15520865, y: 0.18393, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1003787941888073700}
+  - {fileID: 714599653945033727}
+  - {fileID: 1594976549109139000}
+  - {fileID: 3459505694525348024}
   m_Father: {fileID: 40287881079126293}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6708891872322893772
 SpriteRenderer:
@@ -237,6 +242,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6212753660105712957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743519449756469076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af10c3d1664f44e5c93b6deb46a2afda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &5359545797577396489
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,11 +280,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5359545797577396489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7499994, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -0.08376213, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.510058, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 40287881079126293}
-  m_RootOrder: 3
+  m_Father: {fileID: 4833583155472750007}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5144066287492822388
 SpriteRenderer:
@@ -341,11 +359,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6965985339762816861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1249977, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -4.11061, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.510058, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 40287881079126293}
-  m_RootOrder: 2
+  m_Father: {fileID: 4833583155472750007}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7176876655325032122
 SpriteRenderer:
@@ -421,11 +439,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7991492479801547463}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.86, y: 1.09, z: -6}
-  m_LocalScale: {x: 0.65999997, y: 0.65999997, z: 1}
+  m_LocalPosition: {x: -5.8179746, y: 3.4588165, z: -3.04}
+  m_LocalScale: {x: 4.25234, y: 3.588322, z: 1}
   m_Children: []
-  m_Father: {fileID: 40287881079126293}
-  m_RootOrder: 1
+  m_Father: {fileID: 4833583155472750007}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5878673427635212280
 MeshRenderer:
@@ -515,10 +533,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6752174574755321695}
-  - {fileID: 1003787941888073700}
-  - {fileID: 714599653945033727}
-  - {fileID: 1594976549109139000}
-  - {fileID: 3459505694525348024}
   - {fileID: 4833583155472750007}
   m_Father: {fileID: 0}
   m_RootOrder: 0

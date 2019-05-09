@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2355255472297903975}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 1.11, z: -6}
-  m_LocalScale: {x: 0.65999997, y: 0.65999997, z: 1}
+  m_LocalPosition: {x: -5.624638, y: 3.5675533, z: -3.04}
+  m_LocalScale: {x: 4.252303, y: 3.588322, z: 1}
   m_Children: []
-  m_Father: {fileID: 6539439482860226898}
-  m_RootOrder: 1
+  m_Father: {fileID: 2553669082745219741}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3889382252022988902
 MeshRenderer:
@@ -116,11 +116,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2408646797700839265}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7499994, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -0.08376141, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.510019, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 6539439482860226898}
-  m_RootOrder: 3
+  m_Father: {fileID: 2553669082745219741}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7137808523876190263
 SpriteRenderer:
@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2553669082745219741}
   - component: {fileID: 5667198843306468726}
+  - component: {fileID: 6971070958782623779}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -197,9 +198,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.763, y: 0.45381996, z: -2.96}
   m_LocalScale: {x: 0.15521, y: 0.18393, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7446047304191665625}
+  - {fileID: 806412317482694001}
+  - {fileID: 7167036475450001629}
+  - {fileID: 3471440216421030585}
   m_Father: {fileID: 6539439482860226898}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5667198843306468726
 SpriteRenderer:
@@ -249,6 +254,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6971070958782623779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552269272050659239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af10c3d1664f44e5c93b6deb46a2afda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &3796177132372913493
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,11 +292,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3796177132372913493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3750012, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: 3.9430525, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.510019, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 6539439482860226898}
-  m_RootOrder: 4
+  m_Father: {fileID: 2553669082745219741}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4611667116198582945
 SpriteRenderer:
@@ -357,10 +375,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6662631958057450940}
-  - {fileID: 7446047304191665625}
-  - {fileID: 806412317482694001}
-  - {fileID: 7167036475450001629}
-  - {fileID: 3471440216421030585}
   - {fileID: 2553669082745219741}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -438,11 +452,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4095072161363886382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1249977, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -4.1105747, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.510019, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 6539439482860226898}
-  m_RootOrder: 2
+  m_Father: {fileID: 2553669082745219741}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8229740328027725984
 SpriteRenderer:

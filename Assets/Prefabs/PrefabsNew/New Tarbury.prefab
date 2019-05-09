@@ -25,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952060436263287569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.98, y: 0.5, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -2.5787036, y: -1.814905, z: -4.64}
+  m_LocalScale: {x: 2.7103477, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 2468958478680438690}
-  m_RootOrder: 3
+  m_Father: {fileID: 1749937969039960767}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1708027281385445783
 SpriteRenderer:
@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749937969039960767}
   - component: {fileID: 2520494009544736772}
+  - component: {fileID: 5853461580739513107}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -106,9 +107,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.6460004, y: 0.83381546, z: -2.96}
   m_LocalScale: {x: 0.25826946, y: 0.18393, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4745364336091945853}
+  - {fileID: 1074258526191901318}
+  - {fileID: 5825563467165474852}
+  - {fileID: 8822361587809998500}
   m_Father: {fileID: 2468958478680438690}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2520494009544736772
 SpriteRenderer:
@@ -158,6 +163,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5853461580739513107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986878781933189145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af10c3d1664f44e5c93b6deb46a2afda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &2727361172303215917
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,11 +201,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2727361172303215917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3549984, y: 0.5, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -4.9986634, y: -1.814905, z: -4.64}
+  m_LocalScale: {x: 2.7103477, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 2468958478680438690}
-  m_RootOrder: 2
+  m_Father: {fileID: 1749937969039960767}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8317590633375507913
 SpriteRenderer:
@@ -263,11 +281,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6182574571329443272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0800006, y: 1.4099956, z: -6}
-  m_LocalScale: {x: 0.65999997, y: 0.65999997, z: 1}
+  m_LocalPosition: {x: -5.87, y: 3.1326056, z: -3.04}
+  m_LocalScale: {x: 2.5554705, y: 3.588322, z: 1}
   m_Children: []
-  m_Father: {fileID: 2468958478680438690}
-  m_RootOrder: 1
+  m_Father: {fileID: 1749937969039960767}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4037611488286095631
 MeshRenderer:
@@ -353,11 +371,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6418517255057033577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.605002, y: 0.5, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -0.15874296, y: -1.814905, z: -4.64}
+  m_LocalScale: {x: 2.7103477, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 2468958478680438690}
-  m_RootOrder: 4
+  m_Father: {fileID: 1749937969039960767}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5304994869761380449
 SpriteRenderer:
@@ -436,10 +454,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1943982722306465931}
-  - {fileID: 4745364336091945853}
-  - {fileID: 1074258526191901318}
-  - {fileID: 5825563467165474852}
-  - {fileID: 8822361587809998500}
   - {fileID: 1749937969039960767}
   m_Father: {fileID: 0}
   m_RootOrder: 0

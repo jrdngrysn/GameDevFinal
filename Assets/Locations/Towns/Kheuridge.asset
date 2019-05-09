@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: Kheuridge
   m_EditorClassIdentifier: 
   locationTitle: Kheuridge
-  spiceMultiplier: 12
-  saltMultiplier: 4
-  artMultiplier: 6
+  locationSlot: 0
+  locationInstance: {fileID: 0}
+  nuts: 0
+  batteries: 1
+  circuits: 1
+  nutMultiplier: 65
+  batteryMultiplier: 45
+  circuitMultiplier: 50
+  nutMultiplierBuy: 70
+  batteryMultiplierBuy: 50
+  circuitMultiplierBuy: 50
+  merchantMoney: 0
+  nutCount: 0
+  batteryCount: 0
+  circuitCount: 0
   sellWares:
     activityDescription: We have many vacation homes for nobles here. We will pay
       12 gold for spices, 4 for salt and 6 for art.

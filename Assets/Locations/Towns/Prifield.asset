@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Prifield
   m_EditorClassIdentifier: 
   locationTitle: Prifield
-  locationSlot: 4
+  locationSlot: 3
   locationInstance: {fileID: 1753977328713319251, guid: f6c35eec53a7d43b78b5a487d8123010,
     type: 3}
-  nutMultiplier: 0
-  batteryMultiplier: 0
-  circuitMultiplier: 0
-  nutMultiplierBuy: 0
-  batteryMultiplierBuy: 0
-  circuitMultiplierBuy: 0
-  merchantMoney: 76
+  nuts: 1
+  batteries: 1
+  circuits: 0
+  nutMultiplier: 10
+  batteryMultiplier: 30
+  circuitMultiplier: 50
+  nutMultiplierBuy: 25
+  batteryMultiplierBuy: 30
+  circuitMultiplierBuy: 50
+  merchantMoney: 64
+  nutCount: 1
+  batteryCount: 4
+  circuitCount: 0
   sellWares:
     activityDescription: The salt shortage up in Fluoson has really driven the price
       up. We'll pay you 4 gold a bag for salt. We also pay 5 for spices and 3 for

@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Acarora
   m_EditorClassIdentifier: 
   locationTitle: Acarora
-  locationSlot: 0
+  locationSlot: 3
   locationInstance: {fileID: 9107236735845332447, guid: 17c3477bc5875498abe4c9bc91282029,
     type: 3}
-  nutMultiplier: 3
-  batteryMultiplier: 4
-  circuitMultiplier: 5
-  nutMultiplierBuy: 3
-  batteryMultiplierBuy: 2
-  circuitMultiplierBuy: 1
-  merchantMoney: 119
+  nuts: 1
+  batteries: 1
+  circuits: 0
+  nutMultiplier: 30
+  batteryMultiplier: 40
+  circuitMultiplier: 50
+  nutMultiplierBuy: 30
+  batteryMultiplierBuy: 20
+  circuitMultiplierBuy: 10
+  merchantMoney: 105
+  nutCount: 6
+  batteryCount: 4
+  circuitCount: 0
   sellWares:
     activityDescription: We buy spices for 7 gold each, salt for 4 and art for 3.
     activityResult: Thank you for your business.

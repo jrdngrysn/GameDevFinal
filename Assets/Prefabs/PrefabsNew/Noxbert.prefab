@@ -25,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084479178560176397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1249977, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -4.3452134, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.0340056, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 5504506794056160247}
-  m_RootOrder: 2
+  m_Father: {fileID: 3961554562873615453}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5668104115376762136
 SpriteRenderer:
@@ -104,11 +104,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585759203642636433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3750012, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: 2.8583884, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.0340056, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 5504506794056160247}
-  m_RootOrder: 4
+  m_Father: {fileID: 3961554562873615453}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2099670944279452892
 SpriteRenderer:
@@ -168,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3961554562873615453}
   - component: {fileID: 3829751054845813877}
+  - component: {fileID: 1345023084547034289}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -185,9 +186,13 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.879, y: 0.45381996, z: -2.96}
   m_LocalScale: {x: 0.17352478, y: 0.18393, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7294379595941848678}
+  - {fileID: 4629236769438346777}
+  - {fileID: 976546865603937911}
+  - {fileID: 2966553687629305270}
   m_Father: {fileID: 5504506794056160247}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3829751054845813877
 SpriteRenderer:
@@ -237,6 +242,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1345023084547034289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847123387493913288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af10c3d1664f44e5c93b6deb46a2afda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1878661211118761857
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,10 +284,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3515028098545051025}
-  - {fileID: 7294379595941848678}
-  - {fileID: 4629236769438346777}
-  - {fileID: 976546865603937911}
-  - {fileID: 2966553687629305270}
   - {fileID: 3961554562873615453}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -426,11 +440,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5199428638521853878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7499994, y: 0.120004475, z: -7.6}
-  m_LocalScale: {x: 0.7, y: 0.69999, z: 1}
+  m_LocalPosition: {x: -0.7434128, y: -1.8149052, z: -4.64}
+  m_LocalScale: {x: 4.0340056, y: 3.8057415, z: 1}
   m_Children: []
-  m_Father: {fileID: 5504506794056160247}
-  m_RootOrder: 3
+  m_Father: {fileID: 3961554562873615453}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5647219351389725022
 SpriteRenderer:
@@ -506,11 +520,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6899671282516795014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 1.12, z: -6}
-  m_LocalScale: {x: 0.65999997, y: 0.65999997, z: 1}
+  m_LocalPosition: {x: -5.814731, y: 3.6219218, z: -3.04}
+  m_LocalScale: {x: 3.803491, y: 3.588322, z: 1}
   m_Children: []
-  m_Father: {fileID: 5504506794056160247}
-  m_RootOrder: 1
+  m_Father: {fileID: 3961554562873615453}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2546963699529420485
 MeshRenderer:

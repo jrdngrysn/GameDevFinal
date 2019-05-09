@@ -25,7 +25,11 @@ public class GameManager : MonoBehaviour
 
     //references to the UI text
     public Text locationTextField;
-    public Text statTextField;
+    public Text coinTextField;
+    public Text nutTextField;
+    public Text batteryTextField;
+    public Text circuitTextField;
+    public Text dayTextField;
 
     public string phaseOfLocation;
 
@@ -35,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     //tracking the current question
     public Location currentLocation;
+    public string prevLocationName;
 
     //setting up singleton of game manager
     public static GameManager Instance;
@@ -78,6 +83,7 @@ public class GameManager : MonoBehaviour
     public GameObject hamburgerButton;
     Animator hamburgerAnimator;
 
+    public Location emptyLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -86,7 +92,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         peopleSource.clip = peopleSound;
 
-        currentLocation = Randomizer.Instance.locationSlots[Random.Range(0, Randomizer.Instance.locationSlots.Length)].GetComponent<Slot>().linkedLocation;
+        currentLocation = Randomizer.Instance.locationSlots[Random.Range(0, 2)].GetComponent<Slot>().linkedLocation;
 
         hamburgerAnimator = hamburgerButton.GetComponent<Animator>();
     }
@@ -99,11 +105,26 @@ public class GameManager : MonoBehaviour
 
         ManageLocationText();
 
+        if (phaseOfLocation == "moving" && currentLocation == emptyLocation)
+        {
+            phaseOfLocation = "leaving";
         }
+
+    }
 
     void ManageStatText ()
     {
-        statTextField.text ="$: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
+        //statTextField.text ="$: " + coins.ToString() + "\t\t\t: " + spices.ToString() + "\t\t\t: " + salts.ToString() + "\t\t\t: " + arts.ToString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDays Left: " + daysLeft.ToString();
+        coinTextField.text = "$: " + coins.ToString();
+        nutTextField.text = ": " + spices.ToString();
+        batteryTextField.text = ": " + salts.ToString();
+        circuitTextField.text = ": " + arts.ToString();
+        dayTextField.text = "Days Left: " + daysLeft.ToString();
+
+    }
+    public void PlayClickSound()
+    {
+        audioSource.PlayOneShot(clickSound);
     }
 
     void ManageLocationText()
@@ -157,7 +178,7 @@ public class GameManager : MonoBehaviour
                 playerTableAnimator.SetBool("Shown", true);
                 merchantTableAnimator.SetBool("Shown", true);
                 exitButtonAnimator.SetBool("Shown", true);
-                hamburgerAnimator.SetBool("Active", false);
+                hamburgerAnimator.SetBool("Active", true);
                 playerMoney.text = "$" + coins.ToString();
                 merchantMoney.text = "$" + currentLocation.merchantMoney.ToString();
                 Camera.main.GetComponent<CameraScript>().atCity = true;
@@ -325,7 +346,7 @@ public class GameManager : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.Alpha1))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[0];
                     }
@@ -341,14 +362,14 @@ public class GameManager : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.Alpha1))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[0];
                     }
                     else if (Input.GetKeyUp(KeyCode.Alpha2))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[1];
                     }
@@ -364,21 +385,21 @@ public class GameManager : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.Alpha1))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[0];
                     }
                     else if (Input.GetKeyUp(KeyCode.Alpha2))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                       //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[1];
                     }
                     else if (Input.GetKeyUp(KeyCode.Alpha3))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[2];
                     }
@@ -394,28 +415,28 @@ public class GameManager : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.Alpha1))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[0];
                     }
                     else if (Input.GetKeyUp(KeyCode.Alpha2))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[1];
                     }
                     else if (Input.GetKeyUp(KeyCode.Alpha3))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[2];
                     }
                     else if (Input.GetKeyUp(KeyCode.Alpha4))
                     {
                         audioSource.PlayOneShot(clickSound);
-                        phaseOfLocation = "moving";
+                        //phaseOfLocation = "moving";
                         daysLeft--;
                         currentLocation = currentLocation.locations[3];
                     }

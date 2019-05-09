@@ -21,6 +21,10 @@ public class CameraScript : MonoBehaviour
 
     private bool Drag = false;
 
+
+    Vector2 xBounds = new Vector2(-21,4);
+    Vector2 yBounds = new Vector2(-22,-1);
+
     void LateUpdate()
     {
         if (!atCity)
@@ -47,11 +51,15 @@ public class CameraScript : MonoBehaviour
                 {
                     Camera.main.transform.position = Origin - Diference;
                 }
+
+                CheckBounds();
+
             }
             else
             {
                 float step = cameraSpeed * Time.deltaTime;
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, -2.3f, -99.9f), step);
+
             }
              if (sizeValue < movingSize)
                 {
@@ -74,40 +82,62 @@ public class CameraScript : MonoBehaviour
         Camera.main.orthographicSize = sizeValue;
     }
 
-        // Update is called once per frame
-        //void Update()
-        //{
-        //    float xAxis = Input.GetAxis("Horizontal");
-        //    float yAxis = Input.GetAxis("Vertical");
+    void CheckBounds ()
+    {
 
 
-        //if (!atCity) {
-        //if (GameManager.Instance.phaseOfLocation != "moving")
-        //{
-        //            transform.localPosition = new Vector3(transform.localPosition.x + (xAxis / 3), transform.localPosition.y + (yAxis / 3), transform.localPosition.z);
-        //        }
-        //        else
-        //        {
-        //float step = cameraSpeed * Time.deltaTime;
-        //transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, -2.3f, -99.9f), step);
-        //        }
-        //        if (sizeValue < movingSize)
-        //        {
-        //            sizeValue += sizeChangeValue;
-        //        }
-        //    }
-        //else
-        //{
-        //float step = cameraSpeed * Time.deltaTime;
-        //transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0,-2.3f, -99.9f), step);
-        //if (sizeValue > zoomedSize)
-        //{
-        //    sizeValue -= sizeChangeValue;
-        //}
-        //    }
+        if (gameObject.transform.position.x > 27f)
+        {
+            gameObject.transform.position = new Vector3(27f, gameObject.transform.position.y, gameObject.transform.position.z);
+        } else if (gameObject.transform.position.x < -26f)
+        {
+            gameObject.transform.position = new Vector3(-26f, gameObject.transform.position.y, gameObject.transform.position.z);
+        }
 
 
-        //    Camera.main.orthographicSize = sizeValue;
-        //}
-    
+        if (gameObject.transform.position.y > 30f)
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 30f, gameObject.transform.position.z);
+        } else if (transform.position.y < -10f)
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, -10f, gameObject.transform.position.z);
+        }
+    }
+
+    // Update is called once per frame
+    //void Update()
+    //{
+    //    float xAxis = Input.GetAxis("Horizontal");
+    //    float yAxis = Input.GetAxis("Vertical");
+
+
+    //if (!atCity) {
+    //if (GameManager.Instance.phaseOfLocation != "moving")
+    //{
+    //            transform.localPosition = new Vector3(transform.localPosition.x + (xAxis / 3), transform.localPosition.y + (yAxis / 3), transform.localPosition.z);
+    //        }
+    //        else
+    //        {
+    //float step = cameraSpeed * Time.deltaTime;
+    //transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, -2.3f, -99.9f), step);
+    //        }
+    //        if (sizeValue < movingSize)
+    //        {
+    //            sizeValue += sizeChangeValue;
+    //        }
+    //    }
+    //else
+    //{
+    //float step = cameraSpeed * Time.deltaTime;
+    //transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0,-2.3f, -99.9f), step);
+    //if (sizeValue > zoomedSize)
+    //{
+    //    sizeValue -= sizeChangeValue;
+    //}
+    //    }
+
+
+    //    Camera.main.orthographicSize = sizeValue;
+    //}
+
 }

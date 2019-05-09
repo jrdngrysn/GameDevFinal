@@ -18,6 +18,8 @@ public class TrailSpawner : MonoBehaviour
 
     public static TrailSpawner Instance;
 
+    public Location emptyLocation;
+
     void Start()
     {
 
@@ -33,21 +35,23 @@ public class TrailSpawner : MonoBehaviour
         if (GameManager.Instance.phaseOfLocation != "leaving")
         {
             currentLocationCoords = GameObject.Find(GameManager.Instance.currentLocation.locationTitle + "(Clone)");
-
-            if (gameObject.transform.position.x != currentLocationCoords.transform.position.x && gameObject.transform.position.y != currentLocationCoords.transform.position.y)
+            if (currentLocationCoords != null)
             {
-                moving = true;
-                TrailMovement();
-
-                if (dotTimer > .2f)
+                if (gameObject.transform.position.x != currentLocationCoords.transform.position.x && gameObject.transform.position.y != currentLocationCoords.transform.position.y && GameManager.Instance.currentLocation != emptyLocation)
                 {
-                    SpawnDots();
-                    dotTimer = 0;
+                    moving = true;
+                    TrailMovement();
+
+                    if (dotTimer > .2f)
+                    {
+                        SpawnDots();
+                        dotTimer = 0;
+                    }
                 }
-            }
-            else
-            {
-                moving = false;
+                else
+                {
+                    moving = false;
+                }
             }
         }
 

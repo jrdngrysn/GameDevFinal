@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Krose
   m_EditorClassIdentifier: 
   locationTitle: Krose
-  locationSlot: 1
+  locationSlot: 6
   locationInstance: {fileID: 1955963255343427794, guid: c8049938fcde04e42869f58504b5d479,
     type: 3}
-  nutMultiplier: 0
-  batteryMultiplier: 0
-  circuitMultiplier: 0
-  nutMultiplierBuy: 0
-  batteryMultiplierBuy: 0
-  circuitMultiplierBuy: 0
-  merchantMoney: 91
+  nuts: 0
+  batteries: 1
+  circuits: 1
+  nutMultiplier: 20
+  batteryMultiplier: 50
+  circuitMultiplier: 30
+  nutMultiplierBuy: 60
+  batteryMultiplierBuy: 40
+  circuitMultiplierBuy: 40
+  merchantMoney: 104
+  nutCount: 0
+  batteryCount: 1
+  circuitCount: 5
   sellWares:
     activityDescription: Hi there, we don't have much need for salt becuase we have
       a new road straight to New Tarbury, but we'll buy it for 2 gold a bag. We will

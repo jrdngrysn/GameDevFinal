@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: Writa
   m_EditorClassIdentifier: 
   locationTitle: Writa
-  spiceMultiplier: 3
-  saltMultiplier: 3
-  artMultiplier: 4
+  locationSlot: 0
+  locationInstance: {fileID: 0}
+  nuts: 1
+  batteries: 0
+  circuits: 1
+  nutMultiplier: 50
+  batteryMultiplier: 50
+  circuitMultiplier: 50
+  nutMultiplierBuy: 55
+  batteryMultiplierBuy: 55
+  circuitMultiplierBuy: 55
+  merchantMoney: 0
+  nutCount: 0
+  batteryCount: 0
+  circuitCount: 0
   sellWares:
     activityDescription: We don't get many merchants in Writa, but we love them!!
       we pay 3 gold for a bag of spices or salt and 4 for art.
