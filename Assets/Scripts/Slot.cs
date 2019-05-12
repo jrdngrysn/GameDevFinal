@@ -25,6 +25,8 @@ public class Slot : MonoBehaviour
     public TextMesh dayText;
     public LabelFloat floatScript;
 
+    public int prevDaysLeft;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,8 @@ public class Slot : MonoBehaviour
         floatScript = GameObject.Find(linkedLocation.locationTitle + "(Clone)/Box").GetComponent<LabelFloat>();
         floatScript.dayText = dayText;
 
+        prevDaysLeft = 50;
+
         SetIcons();
     }
     private void Update()
@@ -54,6 +58,62 @@ public class Slot : MonoBehaviour
         CheckResources();
         SetIcons();
         SetDayText();
+        ChangeResources();
+    }
+
+    void ChangeResources()
+    {
+        if (GameManager.Instance.daysLeft < prevDaysLeft)
+        {
+            int rand;
+            if (linkedLocation.nuts)
+            {
+                rand = Random.Range(0, 1);
+
+                if (rand == 0 && linkedLocation.nutMultiplier > linkedLocation.nutMultiplierBuy)
+                {
+                    linkedLocation.nutMultiplier -= 2;
+                    linkedLocation.nutMultiplierBuy++;
+                }
+                else if (linkedLocation.nutMultiplierBuy > 10)
+                {
+                    linkedLocation.nutMultiplier++;
+                    linkedLocation.nutMultiplierBuy--;
+                }
+            }
+            if (linkedLocation.batteries)
+            {
+                rand = Random.Range(0, 1);
+
+                if (rand == 0 & linkedLocation.batteryMultiplier > linkedLocation.batteryMultiplierBuy)
+                {
+                    linkedLocation.batteryMultiplier -= 2;
+                    linkedLocation.batteryMultiplierBuy++;
+                }
+                else if(linkedLocation.batteryMultiplierBuy > 10)
+                {
+                    linkedLocation.batteryMultiplier++;
+                    linkedLocation.batteryMultiplierBuy--;
+                }
+            }
+
+            if (linkedLocation.circuits)
+            {
+                rand = Random.Range(0, 1);
+
+                if (rand == 0 & linkedLocation.circuitMultiplier > linkedLocation.circuitMultiplierBuy)
+                {
+                    linkedLocation.circuitMultiplier -= 2;
+                    linkedLocation.circuitMultiplierBuy++;
+                }
+                else if (linkedLocation.circuitMultiplierBuy > 10)
+                {
+                    linkedLocation.circuitMultiplier++;
+                    linkedLocation.circuitMultiplierBuy--;
+                }
+            }
+            prevDaysLeft--;
+        }
     }
 
     void SetResources()

@@ -203,7 +203,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
     m_PressedColor: {r: 0.4339623, g: 0.12486649, b: 0.12486649, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1476,6 +1476,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 722640431}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!61 &116214774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2259,6 +2260,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 934350987}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &244036288
 Transform:
   m_ObjectHideFlags: 0
@@ -2781,6 +2783,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 869749684}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &319022193
 Transform:
   m_ObjectHideFlags: 0
@@ -2880,6 +2883,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 583724031}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &330830000
 Transform:
   m_ObjectHideFlags: 0
@@ -3601,7 +3605,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
     m_PressedColor: {r: 0.4339623, g: 0.12486649, b: 0.12486649, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4276,6 +4280,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 1561332918}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &531982215
 Transform:
   m_ObjectHideFlags: 0
@@ -4835,6 +4840,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 970922894}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &602994699
 Transform:
   m_ObjectHideFlags: 0
@@ -5092,6 +5098,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 2074621850}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &615840394
 Transform:
   m_ObjectHideFlags: 0
@@ -7744,6 +7751,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 2115744163}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!61 &996960854
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8783,6 +8791,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 1821952615}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!4 &1240816630
 Transform:
   m_ObjectHideFlags: 0
@@ -8923,7 +8932,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.3820755, g: 0.43876603, b: 1, a: 1}
     m_PressedColor: {r: 0.12130651, g: 0.22633542, b: 0.5471698, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9076,6 +9085,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 30925551}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!61 &1260243834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10332,6 +10342,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 1182187997}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!61 &1422002377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10826,6 +10837,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 970140728}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!61 &1471443487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10970,7 +10982,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.3820755, g: 0.43876603, b: 1, a: 1}
     m_PressedColor: {r: 0.12130651, g: 0.22633542, b: 0.5471698, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11302,7 +11314,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.3820755, g: 0.43876603, b: 1, a: 1}
     m_PressedColor: {r: 0.12130651, g: 0.22633542, b: 0.5471698, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -12182,7 +12194,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 0.41037738, b: 0.41037738, a: 1}
     m_PressedColor: {r: 0.4339623, g: 0.12486649, b: 0.12486649, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -13313,6 +13325,7 @@ MonoBehaviour:
   circuitsLocation: 0
   dayText: {fileID: 350306685}
   floatScript: {fileID: 0}
+  prevDaysLeft: 0
 --- !u!61 &1780677046
 BoxCollider2D:
   m_ObjectHideFlags: 0
