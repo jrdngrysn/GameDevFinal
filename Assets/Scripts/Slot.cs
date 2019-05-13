@@ -70,12 +70,12 @@ public class Slot : MonoBehaviour
             {
                 rand = Random.Range(0, 1);
 
-                if (rand == 0 && linkedLocation.nutMultiplier > linkedLocation.nutMultiplierBuy)
+                if (rand == 0 )
                 {
                     linkedLocation.nutMultiplier -= 2;
                     linkedLocation.nutMultiplierBuy++;
                 }
-                else if (linkedLocation.nutMultiplierBuy > 10)
+                else if (linkedLocation.nutMultiplierBuy > 10 && linkedLocation.nutMultiplier < linkedLocation.nutMultiplierBuy)
                 {
                     linkedLocation.nutMultiplier++;
                     linkedLocation.nutMultiplierBuy--;
@@ -85,12 +85,12 @@ public class Slot : MonoBehaviour
             {
                 rand = Random.Range(0, 1);
 
-                if (rand == 0 & linkedLocation.batteryMultiplier > linkedLocation.batteryMultiplierBuy)
+                if (rand == 0 )
                 {
                     linkedLocation.batteryMultiplier -= 2;
                     linkedLocation.batteryMultiplierBuy++;
                 }
-                else if(linkedLocation.batteryMultiplierBuy > 10)
+                else if(linkedLocation.batteryMultiplierBuy > 10 && linkedLocation.batteryMultiplier < linkedLocation.batteryMultiplierBuy)
                 {
                     linkedLocation.batteryMultiplier++;
                     linkedLocation.batteryMultiplierBuy--;
@@ -101,12 +101,12 @@ public class Slot : MonoBehaviour
             {
                 rand = Random.Range(0, 1);
 
-                if (rand == 0 & linkedLocation.circuitMultiplier > linkedLocation.circuitMultiplierBuy)
+                if (rand == 0 )
                 {
                     linkedLocation.circuitMultiplier -= 2;
                     linkedLocation.circuitMultiplierBuy++;
                 }
-                else if (linkedLocation.circuitMultiplierBuy > 10)
+                else if (linkedLocation.circuitMultiplierBuy > 10 && linkedLocation.circuitMultiplier < linkedLocation.circuitMultiplierBuy)
                 {
                     linkedLocation.circuitMultiplier++;
                     linkedLocation.circuitMultiplierBuy--;
