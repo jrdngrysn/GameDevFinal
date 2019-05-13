@@ -20,7 +20,7 @@ MonoBehaviour:
   batteries: 1
   circuits: 1
   nutMultiplier: 20
-  batteryMultiplier: 50
+  batteryMultiplier: 40
   circuitMultiplier: 30
   nutMultiplierBuy: 60
   batteryMultiplierBuy: 40

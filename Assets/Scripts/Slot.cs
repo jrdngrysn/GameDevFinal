@@ -70,7 +70,7 @@ public class Slot : MonoBehaviour
             {
                 rand = Random.Range(0, 1);
 
-                if (rand == 0 )
+                if (rand == 0 && linkedLocation.nutMultiplier > 10)
                 {
                     linkedLocation.nutMultiplier -= 2;
                     linkedLocation.nutMultiplierBuy++;
@@ -80,12 +80,16 @@ public class Slot : MonoBehaviour
                     linkedLocation.nutMultiplier++;
                     linkedLocation.nutMultiplierBuy--;
                 }
+                if (linkedLocation.nutMultiplier > linkedLocation.nutMultiplierBuy)
+                {
+                    linkedLocation.nutMultiplier = linkedLocation.nutMultiplierBuy;
+                }
             }
             if (linkedLocation.batteries)
             {
                 rand = Random.Range(0, 1);
 
-                if (rand == 0 )
+                if (rand == 0 && linkedLocation.batteryMultiplier > 10)
                 {
                     linkedLocation.batteryMultiplier -= 2;
                     linkedLocation.batteryMultiplierBuy++;
@@ -95,13 +99,17 @@ public class Slot : MonoBehaviour
                     linkedLocation.batteryMultiplier++;
                     linkedLocation.batteryMultiplierBuy--;
                 }
+                if (linkedLocation.batteryMultiplier > linkedLocation.batteryMultiplierBuy)
+                {
+                    linkedLocation.batteryMultiplier = linkedLocation.batteryMultiplierBuy;
+                }
             }
 
             if (linkedLocation.circuits)
             {
                 rand = Random.Range(0, 1);
 
-                if (rand == 0 )
+                if (rand == 0 && linkedLocation.circuitMultiplier > 10)
                 {
                     linkedLocation.circuitMultiplier -= 2;
                     linkedLocation.circuitMultiplierBuy++;
@@ -110,6 +118,11 @@ public class Slot : MonoBehaviour
                 {
                     linkedLocation.circuitMultiplier++;
                     linkedLocation.circuitMultiplierBuy--;
+                }
+
+                if (linkedLocation.circuitMultiplier > linkedLocation.circuitMultiplierBuy)
+                {
+                    linkedLocation.circuitMultiplier = linkedLocation.circuitMultiplierBuy;
                 }
             }
             prevDaysLeft--;
