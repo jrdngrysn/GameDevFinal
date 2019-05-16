@@ -96,7 +96,8 @@ public class UIButtonScript : MonoBehaviour
 
     }
 
-    public void BuyNuts () {
+    public void BuyNuts()
+    {
         if (GameManager.Instance.currentLocation.nutCount > 0 && GameManager.Instance.coins >= GameManager.Instance.currentLocation.nutMultiplierBuy)
         {
             GameManager.Instance.spices++;
@@ -189,7 +190,6 @@ public class UIButtonScript : MonoBehaviour
             GameManager.Instance.PlayWrongSound();
         }
     }
-
     public void PlayClickSound() 
     {
         GameManager.Instance.PlayClickSound();
